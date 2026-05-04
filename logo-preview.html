@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+  body { background: #f5efe0; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; flex-direction: column; gap: 48px; }
+  .logo-wrap { background: white; padding: 60px 80px; display: inline-flex; align-items: center; justify-content: center; }
+  .logo-wrap-dark { background: #1a2535; padding: 60px 80px; display: inline-flex; align-items: center; justify-content: center; }
+  .label { font-family: sans-serif; font-size: 12px; color: #888; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: -32px; }
+</style>
+</head>
+<body>
+<div class="label">On white</div>
+<div class="logo-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 295" width="360" height="295">
+    <defs>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Cormorant+Garamond:ital,wght@1,500&amp;display=swap');
+      </style>
+    </defs>
+
+    <!-- WISP 1: gold, leftmost, tallest, leans left -->
+    <path d="M 163 113 C 152 90 136 52 150 16 C 161 34 174 78 163 113 Z" fill="#C4883A"/>
+
+    <!-- WISP 2: terracotta, middle -->
+    <path d="M 181 111 C 170 87 159 48 173 14 C 184 34 193 78 181 111 Z" fill="#C4622D"/>
+
+    <!-- WISP 3: warm sand, rightmost, smaller -->
+    <path d="M 199 113 C 191 93 188 62 198 30 C 207 52 210 90 199 113 Z" fill="#D4A574"/>
+
+    <!-- BOWL main body -->
+    <path d="M 46 120 C 42 196 108 244 180 244 C 252 244 318 196 314 120 Z" fill="#1E2A3A"/>
+
+    <!-- RIM outer ring — darker navy ellipse for depth -->
+    <ellipse cx="180" cy="120" rx="134" ry="22" fill="#162030"/>
+
+    <!-- RIM inner — cream fill showing the bowl is open -->
+    <ellipse cx="180" cy="120" rx="129" ry="17" fill="#F0E8D8"/>
+
+    <!-- HIGHLIGHT reflection — angular brushstroke slash -->
+    <path d="M 242 165 C 234 175 230 193 236 208 C 240 205 246 188 252 175 Z" fill="#F0E8D8" opacity="0.6"/>
+    <path d="M 254 178 C 250 185 249 197 253 205 C 257 202 259 189 257 181 Z" fill="#F0E8D8" opacity="0.35"/>
+
+    <!-- WORDMARK: Chicken Souse -->
+    <text
+      x="180" y="268"
+      text-anchor="middle"
+      font-family="'Playfair Display', Georgia, serif"
+      font-size="34"
+      font-weight="700"
+      fill="#1E2A3A"
+      letter-spacing="0.5"
+    >Chicken Souse</text>
+
+    <!-- WORDMARK: for life's journey -->
+    <text
+      x="180" y="290"
+      text-anchor="middle"
+      font-family="'Cormorant Garamond', Georgia, serif"
+      font-size="17"
+      font-style="italic"
+      font-weight="500"
+      fill="#C4622D"
+      letter-spacing="0.8"
+    >for life's journey</text>
+  </svg>
+</div>
+
+<div class="label">On dark (footer context)</div>
+<div class="logo-wrap-dark">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 295" width="300" height="245">
+    <!-- WISP 1: gold -->
+    <path d="M 163 113 C 152 90 136 52 150 16 C 161 34 174 78 163 113 Z" fill="#C4A44A"/>
+    <!-- WISP 2: terracotta lighter -->
+    <path d="M 181 111 C 170 87 159 48 173 14 C 184 34 193 78 181 111 Z" fill="#E07848"/>
+    <!-- WISP 3: warm sand -->
+    <path d="M 199 113 C 191 93 188 62 198 30 C 207 52 210 90 199 113 Z" fill="#D4B888"/>
+
+    <!-- BOWL -->
+    <path d="M 46 120 C 42 196 108 244 180 244 C 252 244 318 196 314 120 Z" fill="#F0E8D8"/>
+    <ellipse cx="180" cy="120" rx="134" ry="22" fill="#D8CFBC"/>
+    <ellipse cx="180" cy="120" rx="129" ry="17" fill="#1a2535"/>
+    <path d="M 238 172 C 228 180 228 204 242 210 C 256 206 262 184 250 173 Z" fill="#F0E8D8" opacity="0.3"/>
+
+    <!-- WORDMARK -->
+    <text x="180" y="268" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="700" fill="#F0E8D8" letter-spacing="0.5">Chicken Souse</text>
+    <text x="180" y="290" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="17" font-style="italic" font-weight="500" fill="#C4A44A" letter-spacing="0.8">for life's journey</text>
+  </svg>
+</div>
+
+</body>
+</html>
