@@ -12,647 +12,7 @@
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-<style>
-  :root {
-    --cream: oklch(0.975 0.013 82);
-    --cream-mid: oklch(0.955 0.018 78);
-    --cream-deep: oklch(0.930 0.025 74);
-    --navy: oklch(0.22 0.028 248);
-    --navy-mid: oklch(0.38 0.025 245);
-    --terra: oklch(0.58 0.115 46);
-    --terra-light: oklch(0.88 0.055 50);
-    --gold: oklch(0.74 0.095 84);
-    --gold-light: oklch(0.92 0.045 84);
-    --text: oklch(0.22 0.020 248);
-    --text-mid: oklch(0.45 0.018 240);
-    --text-light: oklch(0.62 0.015 240);
-    --rule: oklch(0.87 0.020 75);
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--cream);
-    color: var(--text);
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-weight: 400;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-  img { display: block; max-width: 100%; }
-  a { color: inherit; text-decoration: none; }
-
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 48px;
-    height: 72px;
-    background: oklch(0.975 0.013 82 / 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--rule);
-    transition: box-shadow 0.3s;
-  }
-  nav.scrolled { box-shadow: 0 2px 24px oklch(0.22 0.028 248 / 0.08); }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; font-weight: 600; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--navy);
-  }
-  .nav-links { display: flex; gap: 36px; }
-  .nav-links a {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; font-weight: 500; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--text-mid);
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--terra); }
-  .nav-cta {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; font-weight: 600; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--cream);
-    background: var(--terra);
-    padding: 10px 24px; border: none; cursor: pointer;
-    transition: background 0.2s;
-  }
-  .nav-cta:hover { background: oklch(0.52 0.115 46); }
-
-  /* HERO */
-  #hero {
-    min-height: 100vh; padding-top: 72px;
-    display: grid; grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
-  .hero-text {
-    padding: 80px 64px 80px 80px;
-  }
-  .hero-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; font-weight: 600; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--terra);
-    margin-bottom: 28px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .hero-label::before {
-    content: ''; display: block; width: 32px; height: 1px; background: var(--terra);
-  }
-  .hero-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(42px, 5vw, 66px);
-    font-weight: 500; line-height: 1.12;
-    color: var(--navy); margin-bottom: 12px;
-    text-wrap: pretty;
-  }
-  .hero-title em { font-style: italic; color: var(--terra); }
-  .hero-subtitle {
-    font-family: 'Cormorant Garamond', serif; font-size: 17px;
-    letter-spacing: 0.06em; color: var(--text-mid);
-    margin-bottom: 28px; font-style: italic;
-  }
-  .hero-tagline {
-    font-size: 17px; color: var(--text-mid);
-    margin-bottom: 40px; max-width: 380px;
-    border-left: 2px solid var(--gold); padding-left: 18px;
-    font-style: italic;
-  }
-  .btn-primary {
-    display: inline-block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; font-weight: 600; letter-spacing: 0.18em;
-    text-transform: uppercase;
-    background: var(--navy); color: var(--cream);
-    padding: 15px 36px; cursor: pointer; border: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn-primary:hover { background: var(--terra); transform: translateY(-1px); }
-  .btn-outline {
-    display: inline-block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; font-weight: 600; letter-spacing: 0.18em;
-    text-transform: uppercase;
-    background: transparent; color: var(--navy);
-    padding: 14px 36px; cursor: pointer;
-    border: 1.5px solid var(--navy);
-    transition: all 0.2s;
-  }
-  .btn-outline:hover { background: var(--navy); color: var(--cream); }
-  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
-
-  .hero-image {
-    position: relative; height: 100vh; min-height: 600px;
-    background: var(--cream-deep);
-    display: flex; align-items: center; justify-content: center;
-    overflow: hidden;
-  }
-  .hero-image-placeholder {
-    width: 100%; height: 100%;
-    background: linear-gradient(160deg, oklch(0.88 0.04 78), oklch(0.78 0.055 65));
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 16px;
-    position: relative;
-  }
-  .hero-logo-watermark {
-    position: absolute;
-    top: 36px; right: 36px;
-    width: 120px; height: 120px;
-    object-fit: contain;
-    opacity: 0.22;
-    pointer-events: none;
-    mix-blend-mode: multiply;
-  }
-  .book-cover {
-    width: 260px; height: 380px;
-    background: oklch(0.22 0.028 248);
-    box-shadow: 24px 32px 64px oklch(0.22 0.028 248 / 0.35), 4px 4px 0 oklch(0.58 0.115 46);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding: 32px 24px; text-align: center; position: relative;
-    border-top: 6px solid var(--terra);
-  }
-  .book-cover-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 16px;
-  }
-  .book-cover-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px; font-weight: 500; color: var(--cream);
-    line-height: 1.2; margin-bottom: 8px;
-    font-style: italic;
-  }
-  .book-cover-edition {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: oklch(0.78 0.05 80); margin-top: 4px;
-  }
-  .book-cover-rule {
-    width: 40px; height: 1px; background: var(--gold); margin: 16px auto;
-  }
-  .book-cover-author {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 11px; letter-spacing: 0.12em; color: oklch(0.70 0.04 80);
-  }
-  .book-cover-deco {
-    position: absolute; bottom: 20px; right: 20px;
-    width: 36px; height: 36px; opacity: 0.3;
-  }
-
-  /* SECTION SHARED */
-  section { padding: 96px 80px; }
-  .section-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 12px; font-weight: 600; letter-spacing: 0.24em;
-    text-transform: uppercase; color: var(--terra);
-    margin-bottom: 24px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .section-label::after {
-    content: ''; display: block; width: 48px; height: 1px; background: var(--terra); opacity: 0.5;
-  }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 3.5vw, 48px); font-weight: 500;
-    color: var(--navy); line-height: 1.2; text-wrap: pretty;
-    margin-bottom: 20px;
-  }
-  .section-body {
-    font-size: 17px; color: var(--text-mid); max-width: 600px;
-    line-height: 1.8;
-  }
-  hr.divider {
-    border: none; border-top: 1px solid var(--rule);
-    margin: 0;
-  }
-
-  /* INTRO BAND */
-  #intro-band {
-    background: var(--navy);
-    padding: 56px 80px;
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
-  }
-  .intro-stat {
-    padding: 0 48px;
-    border-right: 1px solid oklch(1 0 0 / 0.1);
-    text-align: center;
-  }
-  .intro-stat:first-child { border-left: none; }
-  .intro-stat:last-child { border-right: none; }
-  .intro-stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px; font-weight: 400; font-style: italic;
-    color: var(--gold); display: block; line-height: 1;
-    margin-bottom: 10px;
-  }
-  .intro-stat-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
-    color: oklch(0.78 0.03 78);
-  }
-
-  /* DEVOTION SAMPLE */
-  #devotion {
-    background: var(--cream);
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
-  }
-  .devotion-meta {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--text-light); margin-bottom: 8px;
-  }
-  .devotion-question {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px; font-style: italic; color: var(--text);
-    line-height: 1.5; margin: 20px 0 28px;
-    padding: 20px 24px;
-    background: var(--cream-mid);
-    border-left: 3px solid var(--terra);
-  }
-  .devotion-story {
-    font-size: 16px; line-height: 1.85; color: var(--text-mid);
-    margin-bottom: 24px;
-  }
-  .devotion-read-more {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; font-weight: 600; letter-spacing: 0.16em;
-    text-transform: uppercase; color: var(--terra);
-    cursor: pointer; display: flex; align-items: center; gap: 8px;
-    background: none; border: none; padding: 0;
-    transition: gap 0.2s;
-  }
-  .devotion-read-more:hover { gap: 14px; }
-  .devotion-read-more::after { content: '→'; }
-  .devotion-expanded { display: none; }
-  .devotion-expanded.open { display: block; }
-
-  .devotion-sidebar {
-    position: sticky; top: 100px;
-  }
-  .scripture-card {
-    background: oklch(0.32 0.035 248);
-    padding: 48px 40px; text-align: center; margin-bottom: 24px;
-  }
-  .scripture-card-eyebrow {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 20px;
-    display: flex; align-items: center; justify-content: center; gap: 10px;
-  }
-  .scripture-card-eyebrow::before,
-  .scripture-card-eyebrow::after {
-    content: ''; display: block; width: 28px; height: 1px; background: var(--gold); opacity: 0.5;
-  }
-  .scripture-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px; font-style: italic; color: var(--cream);
-    line-height: 1.6; margin-bottom: 20px;
-  }
-  .scripture-ref {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; letter-spacing: 0.14em; color: var(--gold);
-  }
-
-  /* WHAT'S INSIDE */
-  #whats-inside {
-    background: var(--cream-mid);
-    text-align: center;
-  }
-  #whats-inside .section-label { justify-content: center; }
-  #whats-inside .section-label::after { display: none; }
-  #whats-inside .section-label::before {
-    content: ''; display: block; width: 48px; height: 1px; background: var(--terra); opacity: 0.5;
-  }
-  .elements-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
-    margin-top: 64px;
-  }
-  .element-card {
-    background: var(--cream);
-    padding: 48px 32px;
-    text-align: center;
-    transition: background 0.25s, transform 0.2s;
-    cursor: default;
-  }
-  .element-card:hover {
-    background: oklch(0.22 0.028 248);
-    transform: translateY(-4px);
-  }
-  .element-card:hover .element-num,
-  .element-card:hover .element-name,
-  .element-card:hover .element-desc { color: var(--cream); }
-  .element-card:hover .element-num { color: var(--gold); }
-  .element-card:hover .element-icon { background: oklch(0.30 0.03 248); border-color: oklch(0.30 0.03 248); }
-  .element-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px; font-style: italic; font-weight: 400;
-    color: var(--terra-light); line-height: 1; margin-bottom: 20px;
-    transition: color 0.25s;
-  }
-  .element-icon {
-    width: 52px; height: 52px; margin: 0 auto 20px;
-    border: 1.5px solid var(--rule);
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.25s, border-color 0.25s;
-  }
-  .element-icon svg { width: 22px; height: 22px; }
-  .element-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px; color: var(--navy); margin-bottom: 12px;
-    transition: color 0.25s;
-  }
-  .element-desc {
-    font-size: 15px; color: var(--text-light); line-height: 1.7;
-    transition: color 0.25s;
-  }
-
-  /* RECIPE */
-  #recipe {
-    background: var(--cream-deep);
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
-  }
-  .recipe-header { margin-bottom: 40px; }
-  .recipe-intro { font-size: 16px; color: var(--text-mid); line-height: 1.8; margin-bottom: 32px; }
-  .recipe-tabs {
-    display: flex; gap: 0; border-bottom: 2px solid var(--rule); margin-bottom: 36px;
-  }
-  .recipe-tab {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-    padding: 12px 28px; cursor: pointer; background: none; border: none;
-    color: var(--text-light); position: relative; transition: color 0.2s;
-  }
-  .recipe-tab.active { color: var(--terra); }
-  .recipe-tab.active::after {
-    content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
-    height: 2px; background: var(--terra);
-  }
-  .recipe-panel { display: none; }
-  .recipe-panel.active { display: block; }
-  .ingredient-list { list-style: none; }
-  .ingredient-list li {
-    font-size: 16px; color: var(--text-mid);
-    padding: 10px 0; border-bottom: 1px solid var(--rule);
-    display: flex; justify-content: space-between; align-items: baseline;
-  }
-  .ingredient-name { color: var(--text); }
-  .ingredient-amount {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px; letter-spacing: 0.08em; color: var(--terra);
-  }
-  .steps-list { list-style: none; counter-reset: steps; }
-  .steps-list li {
-    counter-increment: steps;
-    font-size: 15.5px; color: var(--text-mid);
-    padding: 14px 0 14px 48px; border-bottom: 1px solid var(--rule);
-    position: relative; line-height: 1.7;
-  }
-  .steps-list li::before {
-    content: counter(steps);
-    position: absolute; left: 0; top: 14px;
-    font-family: 'Playfair Display', serif;
-    font-size: 22px; font-style: italic; color: var(--terra-light);
-    line-height: 1;
-  }
-  .recipe-aside {
-    background: oklch(0.22 0.028 248);
-    padding: 48px 40px; color: var(--cream);
-  }
-  .recipe-aside-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px; font-style: italic; color: var(--cream);
-    margin-bottom: 16px; line-height: 1.3;
-  }
-  .recipe-aside p {
-    font-size: 15px; color: oklch(0.78 0.02 240); line-height: 1.8; margin-bottom: 20px;
-  }
-  .recipe-aside-quote {
-    border-top: 1px solid oklch(1 0 0 / 0.12);
-    padding-top: 24px; margin-top: 8px;
-    font-family: 'Playfair Display', serif;
-    font-size: 19px; font-style: italic; color: var(--gold);
-    line-height: 1.5;
-  }
-  .johnnybread-note {
-    margin-top: 24px; padding: 20px 24px;
-    background: oklch(0.30 0.03 248);
-    font-size: 14px; color: oklch(0.78 0.02 240); line-height: 1.7;
-  }
-  .johnnybread-note strong { color: var(--gold); font-weight: 500; }
-
-  /* SCRIPTURE HIGHLIGHT */
-  #scripture-highlight {
-    background: var(--terra);
-    padding: 80px;
-    text-align: center;
-  }
-  .scripture-hl-eyebrow {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase;
-    color: oklch(0.92 0.04 60); margin-bottom: 32px;
-    display: flex; align-items: center; justify-content: center; gap: 16px;
-  }
-  .scripture-hl-eyebrow::before,
-  .scripture-hl-eyebrow::after {
-    content: ''; display: block; width: 48px; height: 1px; background: currentColor; opacity: 0.5;
-  }
-  .scripture-hl-text {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(26px, 3.5vw, 44px); font-weight: 400; font-style: italic;
-    color: var(--cream); line-height: 1.4; max-width: 800px; margin: 0 auto 24px;
-    text-wrap: pretty;
-  }
-  .scripture-hl-ref {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px; letter-spacing: 0.16em; color: oklch(0.92 0.05 68);
-  }
-
-  /* AUTHORS */
-  #authors {
-    background: var(--cream);
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
-  }
-  .author-image {
-    background: var(--cream-deep);
-    aspect-ratio: 4/5;
-    display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
-  }
-  .author-placeholder {
-    width: 100%; height: 100%;
-    background: linear-gradient(160deg, oklch(0.86 0.035 75), oklch(0.78 0.048 68));
-    display: flex; align-items: flex-end; padding: 24px;
-  }
-  .author-placeholder-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
-    color: oklch(0.45 0.04 60); opacity: 0.7;
-  }
-  .author-block { margin-bottom: 48px; }
-  .author-block:last-child { margin-bottom: 0; }
-  .author-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px; font-weight: 500; color: var(--navy); margin-bottom: 4px;
-  }
-  .author-role {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--terra); margin-bottom: 16px;
-  }
-  .author-bio {
-    font-size: 16px; color: var(--text-mid); line-height: 1.8;
-  }
-  .author-quote {
-    font-family: 'Playfair Display', serif;
-    font-size: 17px; font-style: italic; color: var(--text);
-    padding: 16px 20px; border-left: 2px solid var(--gold);
-    margin-top: 16px; line-height: 1.6;
-  }
-
-  /* ORDER */
-  #order {
-    background: var(--cream-mid);
-  }
-  .order-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
-    margin-top: 48px;
-  }
-  .order-info { }
-  .order-info p {
-    font-size: 16px; color: var(--text-mid); line-height: 1.8; margin-bottom: 20px;
-  }
-  .order-contact-item {
-    display: flex; align-items: center; gap: 14px;
-    font-size: 15px; color: var(--text); margin-bottom: 12px;
-  }
-  .order-contact-icon {
-    width: 36px; height: 36px; background: var(--navy);
-    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-  }
-  .order-contact-icon svg { width: 16px; height: 16px; fill: var(--cream); }
-  .order-contact-link { color: var(--terra); transition: color 0.2s; }
-  .order-contact-link:hover { color: var(--navy); }
-  .order-availability {
-    margin-top: 32px; padding: 24px;
-    background: var(--cream); border-left: 3px solid var(--gold);
-  }
-  .order-availability h4 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--navy); margin-bottom: 8px;
-  }
-  .order-availability p { font-size: 14px; color: var(--text-mid); margin: 0; }
-
-  /* FORM */
-  .order-form { background: var(--cream); padding: 40px; }
-  .form-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px; color: var(--navy); margin-bottom: 28px;
-    font-style: italic;
-  }
-  .form-group { margin-bottom: 20px; }
-  .form-label {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--text-mid); margin-bottom: 8px;
-  }
-  .form-input, .form-select, .form-textarea {
-    width: 100%;
-    background: var(--cream);
-    border: 1.5px solid var(--rule);
-    padding: 12px 16px;
-    font-family: 'Source Serif 4', serif; font-size: 15px; color: var(--text);
-    outline: none; transition: border-color 0.2s;
-    appearance: none;
-    border-radius: 0;
-  }
-  .form-input:focus, .form-select:focus, .form-textarea:focus {
-    border-color: var(--terra);
-  }
-  .form-textarea { resize: vertical; min-height: 100px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .form-submit {
-    width: 100%; padding: 16px;
-    background: var(--navy); color: var(--cream);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
-    border: none; cursor: pointer; transition: background 0.2s;
-    margin-top: 8px;
-  }
-  .form-submit:hover { background: var(--terra); }
-  .form-success {
-    display: none; text-align: center; padding: 32px;
-    font-family: 'Playfair Display', serif;
-    font-size: 22px; font-style: italic; color: var(--navy);
-  }
-  .form-success.show { display: block; }
-  .form-success-icon {
-    font-size: 40px; margin-bottom: 16px; display: block;
-    color: var(--terra);
-  }
-
-  /* FOOTER */
-  footer {
-    background: var(--navy);
-    padding: 64px 80px 40px;
-  }
-  .footer-top {
-    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px;
-    padding-bottom: 48px; border-bottom: 1px solid oklch(1 0 0 / 0.1);
-    margin-bottom: 32px;
-  }
-  .footer-brand-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px; font-style: italic; color: var(--cream);
-    margin-bottom: 8px;
-  }
-  .footer-brand-tagline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; letter-spacing: 0.14em; color: var(--gold);
-    margin-bottom: 20px;
-  }
-  .footer-brand-desc {
-    font-size: 14px; color: oklch(0.62 0.02 240); line-height: 1.7;
-  }
-  .footer-col-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 20px;
-  }
-  .footer-links { list-style: none; }
-  .footer-links li { margin-bottom: 10px; }
-  .footer-links a {
-    font-size: 14px; color: oklch(0.62 0.02 240);
-    transition: color 0.2s;
-  }
-  .footer-links a:hover { color: var(--cream); }
-  .footer-bottom {
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .footer-copy {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; color: oklch(0.45 0.015 240);
-    letter-spacing: 0.08em;
-  }
-  .footer-verse {
-    font-family: 'Playfair Display', serif;
-    font-size: 13px; font-style: italic; color: oklch(0.50 0.02 240);
-  }
-
-  /* SCROLL ANIMATIONS */
-  .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-  @media (max-width: 1024px) {
-    nav { padding: 0 24px; }
-    #hero, #devotion, #recipe, #authors, .order-grid {
-      grid-template-columns: 1fr;
-    }
-    #hero .hero-image { height: 60vw; min-height: 320px; }
-    section { padding: 64px 32px; }
-    #intro-band { padding: 40px 24px; gap: 0; }
-    .elements-grid { grid-template-columns: repeat(2, 1fr); }
-    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
-    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -674,19 +34,28 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-text fade-up">
+    <img src="assets/logo.png" alt="" aria-hidden="true" style="
+      position:absolute;
+      width:540px; height:540px;
+      top:50%; right:-80px; left:auto;
+      transform:translateY(-50%);
+      object-fit:contain;
+      filter:grayscale(1) opacity(0.065);
+      pointer-events:none;
+      z-index:0;
+    ">
+    <div style="position:relative;z-index:1;">
     <div class="hero-label">Bimini, Bahamas · A Devotional</div>
-    <div style="display:flex;align-items:flex-start;gap:20px;">
-      <h1 class="hero-title" style="flex:1;">
-        Chicken Souse<br>
-        for <em>Life</em>
-      </h1>
-      <img src="assets/logo.png" alt="" aria-hidden="true" style="width:260px;height:260px;object-fit:contain;flex-shrink:0;margin-top:0;opacity:0.95;">
-    </div>
+    <h1 class="hero-title">
+      Chicken Souse<br>
+      for <em>Life</em>
+    </h1>
     <p class="hero-subtitle">The Taxi &amp; Tour Operator's Edition</p>
     <p class="hero-tagline">"Nourishment for the soul, strength for the journey."</p>
     <div class="hero-buttons">
       <a href="#order" class="btn-primary">Order Your Copy</a>
       <a href="#devotion" class="btn-outline">Read a Devotion</a>
+    </div>
     </div>
   </div>
   <div class="hero-image">
@@ -728,29 +97,29 @@
 <!-- DEVOTION SAMPLE -->
 <section id="devotion">
   <div>
-    <div class="section-label fade-up">Sample Devotion · No. 12</div>
-    <p class="devotion-meta fade-up">The Detour</p>
-    <h2 class="section-title fade-up">When the Road Doesn't Go Where You Planned</h2>
+    <div class="section-label fade-up">From the Introduction</div>
+    <p class="devotion-meta fade-up">Come and Taste</p>
+    <h2 class="section-title fade-up">A Bowl of Warmth, a Word for the Journey</h2>
 
     <div class="devotion-question fade-up">
-      Have you ever felt certain you were headed in the right direction — only to find the road leading somewhere else entirely?
+      Is there something in your life — a meal, a place, a memory — that carries more than its surface? That holds comfort, healing, and belonging all at once?
     </div>
 
     <div class="devotion-story fade-up">
-      <p>It was a Tuesday morning when a gentleman climbed into the back of my taxi and gave me an address I knew well. Simple run, I thought. Twenty minutes there, back before lunch. I'd driven that road a thousand times. But two miles out, the road was flooded — an overnight rain had washed everything sideways.</p>
-      <p style="margin-top: 16px;">I took the long way around. My passenger, a quiet man in a pressed shirt, had been staring at his phone the whole ride. When we finally pulled up, he looked out the window and said, "This isn't where I asked to go." And I told him, "No sir. But it's where you needed to be." His daughter lived just around the corner. He hadn't seen her in seven years.</p>
+      <p>Chicken souse is a traditional dish in The Bahamas that is more than just a tasty meal. To the Bahamians, it represents comfort, healing, and togetherness in a bowl. This light, flavorful broth of chicken, potatoes, onions, lime, and peppers has soothed generations — offering warmth on early mornings, laughter at family gatherings, and comfort during life's harder moments.</p>
+      <p style="margin-top: 16px;">For Max, chicken souse has been part of his story from the very beginning. He grew up on it, perfected his recipe over time, and now views it as a reflection of life itself.</p>
     </div>
 
     <button class="devotion-read-more fade-up" onclick="toggleDevotion(this)">Continue Reading</button>
 
     <div class="devotion-expanded fade-up" id="devotion-expanded">
       <div class="devotion-story" style="margin-top: 24px;">
-        <p>I don't know how God arranges things. I just know He does. That detour wasn't mine to plan. I was just the driver. But somewhere between the flooded road and the long way around, God was working a reunion that no direct route could have managed.</p>
-        <p style="margin-top: 16px;">We think detours are delays. God calls them directions.</p>
+        <p>Within these pages, you will find devotionals born out of real experiences. They speak to moments of waiting, trusting, forgiving, and seeing God's hand in unexpected places. Whether you savor one reflection at a time, linger in prayer, or return to the stories that speak to your heart, may each page nourish you with fresh hope and gratitude.</p>
+        <p style="margin-top: 16px;">Life, much like chicken souse, is best when shared. It is a blend of joy and struggle, lessons and laughter, all simmered together under God's watchful care.</p>
       </div>
       <div class="devotion-question" style="margin-top: 24px; font-size: 18px;">
         <strong style="font-style: normal; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Cormorant Garamond', serif; color: var(--terra);">Closing Prayer</strong><br><br>
-        Lord, when the road floods and I must take the long way around — remind me that You have never once lost the map. My detours are not Your dead ends. Lead me where I need to be, not just where I planned to go. Amen.
+        Lord, let these pages serve as a bowl of warmth and faith. Remind us that no matter where this journey takes us, You are always present — seasoning every moment with grace, humor, and hope. So we come and taste. One story. One prayer. One lesson at a time. Amen.
       </div>
     </div>
   </div>
@@ -758,8 +127,8 @@
   <div class="devotion-sidebar">
     <div class="scripture-card fade-up">
       <div class="scripture-card-eyebrow">Today's Scripture</div>
-      <p class="scripture-text">"For I know the plans I have for you, declares the Lord — plans to prosper you and not to harm you, plans to give you hope and a future."</p>
-      <div class="scripture-ref">Jeremiah 29:11</div>
+      <p class="scripture-text">"Taste and see that the Lord is good; blessed is the one who takes refuge in him."</p>
+      <div class="scripture-ref">Psalm 34:8</div>
     </div>
     <div style="background: var(--cream-mid); padding: 28px 32px; font-size: 15px; color: var(--text-mid); line-height: 1.7;" class="fade-up">
       <strong style="display: block; font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 12px;">Each Devotion Includes</strong>
