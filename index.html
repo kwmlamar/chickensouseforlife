@@ -37,6 +37,7 @@
       <a href="#devotion">The Book</a>
       <a href="#whats-inside">Inside</a>
       <a href="#authors">Authors</a>
+      <a href="#seminars">Seminars</a>
       <a href="#order">Order</a>
     </div>
     <a href="#order" class="nav-cta">Coming Soon</a>
@@ -249,6 +250,64 @@
 
   <hr class="divider">
 
+  <!-- BOOK SECTIONS -->
+  <section id="book-sections">
+    <div class="section-label fade-up">The Journey</div>
+    <h2 class="section-title fade-up" style="text-align: center; margin: 0 auto 8px;">Five Sections.<br>One Road.</h2>
+    <p class="section-body fade-up" style="margin: 0 auto 56px; text-align: center;">From the first pickup to the final mile — each section of the book walks a different stretch of the journey.</p>
+
+    <div class="book-sections-list">
+
+      <div class="book-section-card fade-up">
+        <div class="book-section-num">Section 1</div>
+        <div class="book-section-content">
+          <div class="book-section-title">The Beginning</div>
+          <p class="book-section-desc">Every journey starts with a pickup, and sometimes you don't even realize you needed that ride until you're already on the road. Looking back, those first moments often teach us more than we understand at the time.</p>
+          <blockquote class="book-section-quote">"Every journey starts with a pickup, and sometimes you don't even realize you needed that ride until you're already on the road."<cite>— Cleveland Maxwell Rolle</cite></blockquote>
+        </div>
+      </div>
+
+      <div class="book-section-card fade-up">
+        <div class="book-section-num">Section 2</div>
+        <div class="book-section-content">
+          <div class="book-section-title">Growing Through It</div>
+          <p class="book-section-desc">Some days the road is smooth, and some days it isn't — but every stop and every delay has a way of teaching you something if you're paying attention. Growth doesn't always come easy, but it always leaves something behind.</p>
+          <blockquote class="book-section-quote">"Every stop and every delay has a way of teaching you something if you're paying attention."<cite>— Cleveland Maxwell Rolle</cite></blockquote>
+        </div>
+      </div>
+
+      <div class="book-section-card fade-up">
+        <div class="book-section-num">Section 3</div>
+        <div class="book-section-content">
+          <div class="book-section-title">Walking with God</div>
+          <p class="book-section-desc">There comes a point on the road when you realize you're not the one in control — God has been guiding the way the whole time. Even in the moments that felt uncertain, there was purpose in every turn.</p>
+          <blockquote class="book-section-quote">"Even in the moments that felt uncertain, there was purpose in every turn."<cite>— Cleveland Maxwell Rolle</cite></blockquote>
+        </div>
+      </div>
+
+      <div class="book-section-card fade-up">
+        <div class="book-section-num">Section 4</div>
+        <div class="book-section-content">
+          <div class="book-section-title">Purpose</div>
+          <p class="book-section-desc">After a while, you start to see it's more than just driving — every stop, every person, every moment starts to mean something. What once felt ordinary begins to reveal a deeper purpose.</p>
+          <blockquote class="book-section-quote">"What once felt ordinary begins to reveal a deeper purpose."<cite>— Cleveland Maxwell Rolle</cite></blockquote>
+        </div>
+      </div>
+
+      <div class="book-section-card fade-up">
+        <div class="book-section-num">Section 5</div>
+        <div class="book-section-content">
+          <div class="book-section-title">What Matters Most</div>
+          <p class="book-section-desc">At the end of the day, it's not the miles you remember — it's the people, the conversations, and the moments that stayed with you. Those are the things that last long after the ride is over.</p>
+          <blockquote class="book-section-quote">"It's not the miles you remember — it's the people, the conversations, and the moments that stayed with you."<cite>— Cleveland Maxwell Rolle</cite></blockquote>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
   <!-- RECIPE -->
   <section id="recipe">
     <div>
@@ -278,7 +337,7 @@
               class="ingredient-amount">2, to taste</span></li>
           <li><span class="ingredient-name">Celery, chopped</span><span class="ingredient-amount">2 stalks
               (optional)</span></li>
-          <li><span class="ingredient-name">Garlic, minced</span><span class="ingredient-amount">2 cloves</span></li>
+          <li><span class="ingredient-name">Garlic, minced</span><span class="ingredient-amount">2 cloves (optional)</span></li>
           <li><span class="ingredient-name">Lime juice, freshly squeezed</span><span class="ingredient-amount">3
               limes</span></li>
           <li><span class="ingredient-name">Allspice berries</span><span class="ingredient-amount">1 tsp
@@ -450,27 +509,29 @@
       <div class="fade-up">
         <div class="order-form" id="order-form-container">
           <div class="form-title">Get Notified</div>
-          <form id="order-form" onsubmit="submitForm(event)">
+          <form id="order-form" onsubmit="submitWaitlist(event)">
+            <input type="hidden" name="access_key" value="4284c468-b80b-4e0f-a91f-6b172751c1d0">
+            <input type="hidden" name="subject" value="New Waitlist Signup — Chicken Souse for Life">
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="fname">First Name</label>
-                <input class="form-input" type="text" id="fname" placeholder="Grace" required>
+                <input class="form-input" type="text" id="fname" name="first_name" placeholder="Grace" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="lname">Last Name</label>
-                <input class="form-input" type="text" id="lname" placeholder="Rolle" required>
+                <input class="form-input" type="text" id="lname" name="last_name" placeholder="Rolle" required>
               </div>
             </div>
             <div class="form-group">
               <label class="form-label" for="email">Email Address</label>
-              <input class="form-input" type="email" id="email" placeholder="you@example.com" required>
+              <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required>
             </div>
             <div class="form-group">
               <label class="form-label" for="message">Any questions for the Rolles?</label>
-              <textarea class="form-textarea" id="message"
+              <textarea class="form-textarea" id="message" name="message"
                 placeholder="Bulk orders, church groups, gifting — anything on your mind…"></textarea>
             </div>
-            <button type="submit" class="form-submit">Notify Me When It's Ready</button>
+            <button type="submit" class="form-submit" data-label="Notify Me When It's Ready">Notify Me When It's Ready</button>
           </form>
           <div class="form-success" id="form-success">
             <span class="form-success-icon">✦</span>
@@ -478,6 +539,119 @@
             <span
               style="font-family: 'Source Serif 4', serif; font-size: 16px; color: var(--text-mid); font-style: normal;">The
               Rolle family will be in touch as soon as the book is ready.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SEMINARS -->
+  <section id="seminars">
+    <div class="section-label fade-up">Book a Seminar</div>
+    <h2 class="section-title fade-up">Bring the Road to Your Event</h2>
+    <p class="section-body fade-up">Max has been described as a messenger of hope, a storyteller with humor, and a living example of God's power to turn brokenness into testimony. If you're interested in having him share his story, reach out and start the conversation.</p>
+
+    <div class="order-grid">
+      <div class="order-info fade-up">
+        <p>Max speaks on faith, perseverance, purpose, and the lessons God hides in ordinary moments. Every talk is personal, grounded in Scripture, and rooted in real life.</p>
+
+        <div class="seminar-types">
+          <div class="seminar-type-item">
+            <div class="seminar-type-icon">✦</div>
+            <div>
+              <div class="seminar-type-name">Church Services &amp; Revival Meetings</div>
+              <div class="seminar-type-desc">A testimony-driven message for Sunday worship or midweek revival.</div>
+            </div>
+          </div>
+          <div class="seminar-type-item">
+            <div class="seminar-type-icon">✦</div>
+            <div>
+              <div class="seminar-type-name">Small Group &amp; Bible Study Sessions</div>
+              <div class="seminar-type-desc">An interactive session pairing devotional readings with discussion.</div>
+            </div>
+          </div>
+          <div class="seminar-type-item">
+            <div class="seminar-type-icon">✦</div>
+            <div>
+              <div class="seminar-type-name">Retreats &amp; Conferences</div>
+              <div class="seminar-type-desc">Half-day or full-day programming for faith communities and groups.</div>
+            </div>
+          </div>
+          <div class="seminar-type-item">
+            <div class="seminar-type-icon">✦</div>
+            <div>
+              <div class="seminar-type-name">Schools &amp; Community Events</div>
+              <div class="seminar-type-desc">Motivational talks for youth, graduates, and local organizations.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-contact-item" style="margin-top: 32px;">
+          <div class="order-contact-icon">
+            <svg viewBox="0 0 16 16">
+              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg>
+          </div>
+          <span>WhatsApp: <a class="order-contact-link" href="https://wa.me/12424422629">+1 (242) 442-2629</a></span>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <div class="order-form" id="seminar-form-container">
+          <div class="form-title">Book an Inquiry</div>
+          <form id="seminar-form" onsubmit="submitSeminar(event)">
+            <input type="hidden" name="access_key" value="4284c468-b80b-4e0f-a91f-6b172751c1d0">
+            <input type="hidden" name="subject" value="Seminar Booking Inquiry — Chicken Souse for Life">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="s-fname">First Name</label>
+                <input class="form-input" type="text" id="s-fname" name="first_name" placeholder="Grace" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="s-lname">Last Name</label>
+                <input class="form-input" type="text" id="s-lname" name="last_name" placeholder="Rolle" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="s-email">Email Address</label>
+              <input class="form-input" type="email" id="s-email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="s-org">Organization or Church Name</label>
+              <input class="form-input" type="text" id="s-org" name="organization" placeholder="Grace Community Church">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="s-type">Event Type</label>
+                <select class="form-input" id="s-type" name="event_type">
+                  <option value="">Select one…</option>
+                  <option>Church Service / Revival</option>
+                  <option>Small Group / Bible Study</option>
+                  <option>Retreat / Conference</option>
+                  <option>School / Community Event</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="s-date">Preferred Date</label>
+                <input class="form-input" type="date" id="s-date" name="preferred_date">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="s-message">Tell us about your event</label>
+              <textarea class="form-textarea" id="s-message" name="message"
+                placeholder="Location, expected attendance, theme, anything helpful…"></textarea>
+            </div>
+            <button type="submit" class="form-submit" data-label="Send Booking Inquiry">Send Booking Inquiry</button>
+          </form>
+          <div class="form-success" id="seminar-success">
+            <span class="form-success-icon">✦</span>
+            Inquiry received — thank you.<br>
+            <span style="font-family: 'Source Serif 4', serif; font-size: 16px; color: var(--text-mid); font-style: normal;">
+              Max or Karenda will be in touch with you shortly to discuss the details.
+            </span>
           </div>
         </div>
       </div>
@@ -505,6 +679,7 @@
           <li><a href="#recipe">The Recipe</a></li>
           <li><a href="#editor">The Editor</a></li>
           <li><a href="#authors">The Authors</a></li>
+          <li><a href="#seminars">Seminars</a></li>
           <li><a href="#order">Get Notified</a></li>
         </ul>
       </div>
@@ -569,11 +744,40 @@
       document.getElementById(panel).classList.add('active');
     }
 
-    // Form submit
-    function submitForm(e) {
+    // Shared Web3Forms submit helper
+    async function submitToWeb3Forms(formEl, successId) {
+      const btn = formEl.querySelector('[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(formEl),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          formEl.style.display = 'none';
+          document.getElementById(successId).classList.add('show');
+        } else {
+          btn.disabled = false;
+          btn.textContent = btn.dataset.label;
+          alert('Something went wrong — please try again or email us directly.');
+        }
+      } catch {
+        btn.disabled = false;
+        btn.textContent = btn.dataset.label;
+        alert('Could not connect — please check your internet and try again.');
+      }
+    }
+
+    function submitWaitlist(e) {
       e.preventDefault();
-      document.getElementById('order-form').style.display = 'none';
-      document.getElementById('form-success').classList.add('show');
+      submitToWeb3Forms(e.target, 'form-success');
+    }
+
+    function submitSeminar(e) {
+      e.preventDefault();
+      submitToWeb3Forms(e.target, 'seminar-success');
     }
   </script>
 
