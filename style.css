@@ -457,7 +457,7 @@ hr.divider {
 }
 .author-image {
   background: var(--cream-deep);
-  aspect-ratio: 4/5;
+  aspect-ratio: 15/14;
   display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden;
 }
@@ -500,7 +500,6 @@ hr.divider {
   display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
   margin-top: 48px;
 }
-.order-info { }
 .order-info p {
   font-size: 16px; color: var(--text-mid); line-height: 1.8; margin-bottom: 20px;
 }

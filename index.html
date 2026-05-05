@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chicken Souse for Life's Journey — The Taxi & Tour Operator's Edition</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicken Souse for Life's Journey — The Taxi & Tour Operator's Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
 
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"
+    integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
+    integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
+    integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
+    crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav id="main-nav">
-  <a href="#" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-    <img src="assets/logo.png" alt="Chicken Souse for Life logo" style="width:52px;height:52px;object-fit:contain;">
-    <span class="nav-logo">Chicken Souse for Life</span>
-  </a>
-  <div class="nav-links">
-    <a href="#devotion">The Book</a>
-    <a href="#whats-inside">Inside</a>
-    <a href="#authors">Authors</a>
-    <a href="#order">Order</a>
-  </div>
-  <a href="#order" class="nav-cta">Order Now</a>
-</nav>
+  <!-- NAV -->
+  <nav id="main-nav">
+    <a href="#" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+      <img src="assets/logo.png" alt="Chicken Souse for Life logo" style="width:52px;height:52px;object-fit:contain;">
+      <span class="nav-logo">Chicken Souse for Life</span>
+    </a>
+    <div class="nav-links">
+      <a href="#devotion">The Book</a>
+      <a href="#whats-inside">Inside</a>
+      <a href="#authors">Authors</a>
+      <a href="#order">Order</a>
+    </div>
+    <a href="#order" class="nav-cta">Order Now</a>
+  </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-text fade-up">
-    <img src="assets/logo.png" alt="" aria-hidden="true" style="
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-text fade-up">
+      <img src="assets/logo.png" alt="" aria-hidden="true" style="
       position:absolute;
       width:540px; height:540px;
       top:50%; right:-80px; left:auto;
@@ -44,538 +54,626 @@
       pointer-events:none;
       z-index:0;
     ">
-    <div style="position:relative;z-index:1;">
-    <div class="hero-label">Bimini, Bahamas · A Devotional</div>
-    <h1 class="hero-title">
-      Chicken Souse<br>
-      for <em>Life</em>
-    </h1>
-    <p class="hero-subtitle">The Taxi &amp; Tour Operator's Edition</p>
-    <p class="hero-tagline">"Nourishment for the soul, strength for the journey."</p>
-    <div class="hero-buttons">
-      <a href="#order" class="btn-primary">Order Your Copy</a>
-      <a href="#devotion" class="btn-outline">Read a Devotion</a>
-    </div>
-    </div>
-  </div>
-  <div class="hero-image">
-    <div class="hero-image-placeholder">
-      <div class="book-cover">
-        <div class="book-cover-label">A Devotional Series</div>
-        <div class="book-cover-title">Chicken Souse for Life</div>
-        <div class="book-cover-rule"></div>
-        <div class="book-cover-edition">The Taxi &amp; Tour<br>Operator's Edition</div>
-        <div class="book-cover-rule"></div>
-        <div class="book-cover-author">Cleveland Maxwell Rolle<br>&amp; Karenda Samantha Rolle</div>
-        <svg class="book-cover-deco" viewBox="0 0 36 36" fill="none">
-          <circle cx="18" cy="18" r="16" stroke="#C4A44A" stroke-width="1"/>
-          <path d="M18 6 L18 30 M6 18 L30 18" stroke="#C4A44A" stroke-width="0.8"/>
-        </svg>
+      <div style="position:relative;z-index:1;">
+        <div class="hero-label">Bimini, Bahamas · A Devotional</div>
+        <h1 class="hero-title">
+          Chicken Souse<br>
+          for <em>Life</em>
+        </h1>
+        <p class="hero-subtitle">The Taxi &amp; Tour Operator's Edition</p>
+        <p class="hero-tagline">"Nourishment for the soul, strength for the journey."</p>
+        <div class="hero-buttons">
+          <a href="#order" class="btn-primary">Order Your Copy</a>
+          <a href="#devotion" class="btn-outline">Read a Devotion</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- INTRO BAND -->
-<div id="intro-band">
-  <div class="intro-stat">
-    <span class="intro-stat-num">50</span>
-    <span class="intro-stat-label">Devotions from the Road</span>
-  </div>
-  <div class="intro-stat">
-    <span class="intro-stat-num">25+</span>
-    <span class="intro-stat-label">Years of Stories</span>
-  </div>
-  <div class="intro-stat">
-    <span class="intro-stat-num">∞</span>
-    <span class="intro-stat-label">Miles of Grace</span>
-  </div>
-</div>
-
-<hr class="divider">
-
-<!-- DEVOTION SAMPLE -->
-<section id="devotion">
-  <div>
-    <div class="section-label fade-up">From the Introduction</div>
-    <p class="devotion-meta fade-up">Come and Taste</p>
-    <h2 class="section-title fade-up">A Bowl of Warmth, a Word for the Journey</h2>
-
-    <div class="devotion-question fade-up">
-      Is there something in your life — a meal, a place, a memory — that carries more than its surface? That holds comfort, healing, and belonging all at once?
-    </div>
-
-    <div class="devotion-story fade-up">
-      <p>Chicken souse is a traditional dish in The Bahamas that is more than just a tasty meal. To the Bahamians, it represents comfort, healing, and togetherness in a bowl. This light, flavorful broth of chicken, potatoes, onions, lime, and peppers has soothed generations — offering warmth on early mornings, laughter at family gatherings, and comfort during life's harder moments.</p>
-      <p style="margin-top: 16px;">For Max, chicken souse has been part of his story from the very beginning. He grew up on it, perfected his recipe over time, and now views it as a reflection of life itself.</p>
-    </div>
-
-    <button class="devotion-read-more fade-up" onclick="toggleDevotion(this)">Continue Reading</button>
-
-    <div class="devotion-expanded fade-up" id="devotion-expanded">
-      <div class="devotion-story" style="margin-top: 24px;">
-        <p>Within these pages, you will find devotionals born out of real experiences. They speak to moments of waiting, trusting, forgiving, and seeing God's hand in unexpected places. Whether you savor one reflection at a time, linger in prayer, or return to the stories that speak to your heart, may each page nourish you with fresh hope and gratitude.</p>
-        <p style="margin-top: 16px;">Life, much like chicken souse, is best when shared. It is a blend of joy and struggle, lessons and laughter, all simmered together under God's watchful care.</p>
-      </div>
-      <div class="devotion-question" style="margin-top: 24px; font-size: 18px;">
-        <strong style="font-style: normal; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Cormorant Garamond', serif; color: var(--terra);">Closing Prayer</strong><br><br>
-        Lord, let these pages serve as a bowl of warmth and faith. Remind us that no matter where this journey takes us, You are always present — seasoning every moment with grace, humor, and hope. So we come and taste. One story. One prayer. One lesson at a time. Amen.
+    <div class="hero-image">
+      <div class="hero-image-placeholder">
+        <div class="book-cover">
+          <div class="book-cover-label">A Devotional Series</div>
+          <div class="book-cover-title">Chicken Souse for Life</div>
+          <div class="book-cover-rule"></div>
+          <div class="book-cover-edition">The Taxi &amp; Tour<br>Operator's Edition</div>
+          <div class="book-cover-rule"></div>
+          <div class="book-cover-author">Cleveland Maxwell Rolle<br>&amp; Karenda Samantha Rolle</div>
+          <svg class="book-cover-deco" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="16" stroke="#C4A44A" stroke-width="1" />
+            <path d="M18 6 L18 30 M6 18 L30 18" stroke="#C4A44A" stroke-width="0.8" />
+          </svg>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="devotion-sidebar">
-    <div class="scripture-card fade-up">
-      <div class="scripture-card-eyebrow">Today's Scripture</div>
-      <p class="scripture-text">"Taste and see that the Lord is good; blessed is the one who takes refuge in him."</p>
-      <div class="scripture-ref">Psalm 34:8</div>
+  <!-- INTRO BAND -->
+  <div id="intro-band">
+    <div class="intro-stat">
+      <span class="intro-stat-num">50</span>
+      <span class="intro-stat-label">Devotions from the Road</span>
     </div>
-    <div style="background: var(--cream-mid); padding: 28px 32px; font-size: 15px; color: var(--text-mid); line-height: 1.7;" class="fade-up">
-      <strong style="display: block; font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 12px;">Each Devotion Includes</strong>
-      A thought-provoking question · A real story from the road · A scripture · A closing prayer
+    <div class="intro-stat">
+      <span class="intro-stat-num">25+</span>
+      <span class="intro-stat-label">Years of Stories</span>
     </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- SCRIPTURE HIGHLIGHT -->
-<div id="scripture-highlight">
-  <div class="scripture-hl-eyebrow">Foundation Scripture</div>
-  <p class="scripture-hl-text">"Whatever you do, work at it with all your heart, as working for the Lord, not for human masters."</p>
-  <div class="scripture-hl-ref">Colossians 3:23 · The Road Verse of Every Mile</div>
-</div>
-
-<!-- WHAT'S INSIDE -->
-<section id="whats-inside">
-  <div class="section-label fade-up">What's Inside</div>
-  <h2 class="section-title fade-up" style="text-align: center; margin: 0 auto 8px;">Four Elements.<br>Fifty Devotions.</h2>
-  <p class="section-body fade-up" style="margin: 0 auto; text-align: center;">Every devotion is built around the same four-part structure — simple enough to follow, deep enough to stay with you all day long.</p>
-
-  <div class="elements-grid">
-    <div class="element-card fade-up">
-      <div class="element-num">01</div>
-      <div class="element-icon">
-        <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-          <circle cx="11" cy="11" r="8"/>
-          <path d="M11 7 v4 l3 2"/>
-        </svg>
-      </div>
-      <div class="element-name">The Question</div>
-      <p class="element-desc">A thought-provoking prompt to open your heart before the story begins.</p>
-    </div>
-    <div class="element-card fade-up">
-      <div class="element-num">02</div>
-      <div class="element-icon">
-        <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-          <path d="M4 6h14M4 10h10M4 14h12M4 18h8"/>
-        </svg>
-      </div>
-      <div class="element-name">The Story</div>
-      <p class="element-desc">A real moment from the road — the kind of story only 25 years of driving can tell.</p>
-    </div>
-    <div class="element-card fade-up">
-      <div class="element-num">03</div>
-      <div class="element-icon">
-        <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-          <path d="M11 3v2M11 17v2M5.636 5.636l1.414 1.414M14.95 14.95l1.414 1.414M3 11h2M17 11h2M5.636 16.364l1.414-1.414M14.95 7.05l1.414-1.414"/>
-          <circle cx="11" cy="11" r="4"/>
-        </svg>
-      </div>
-      <div class="element-name">The Scripture</div>
-      <p class="element-desc">God's word grounded in the moment, placed alongside each story.</p>
-    </div>
-    <div class="element-card fade-up">
-      <div class="element-num">04</div>
-      <div class="element-icon">
-        <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-          <path d="M11 4v8M11 17v1"/>
-          <path d="M6 7.268A7 7 0 1 0 16.5 8"/>
-        </svg>
-      </div>
-      <div class="element-name">The Prayer</div>
-      <p class="element-desc">A closing word to carry with you — whether you're behind the wheel or at a crossroads.</p>
+    <div class="intro-stat">
+      <span class="intro-stat-num">∞</span>
+      <span class="intro-stat-label">Miles of Grace</span>
     </div>
   </div>
 
-  <div style="margin-top: 64px; padding: 40px; background: var(--cream); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;" class="fade-up">
+  <hr class="divider">
+
+  <!-- DEVOTION SAMPLE -->
+  <section id="devotion">
     <div>
-      <div style="font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 8px;">Also Included</div>
-      <div style="font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); font-style: italic;">Max's Traditional Bahamian Chicken Souse Recipe</div>
-      <div style="font-size: 15px; color: var(--text-mid); margin-top: 6px;">Plus: Authentic Johnny Bread — straight from Bimini.</div>
-    </div>
-    <a href="#recipe" class="btn-outline">See the Recipe ↓</a>
-  </div>
-</section>
+      <div class="section-label fade-up">From the Introduction</div>
+      <p class="devotion-meta fade-up">Come and Taste</p>
+      <h2 class="section-title fade-up">A Bowl of Warmth, a Word for the Journey</h2>
 
-<hr class="divider">
-
-<!-- RECIPE -->
-<section id="recipe">
-  <div>
-    <div class="recipe-header">
-      <div class="section-label fade-up">Straight from Bimini</div>
-      <h2 class="section-title fade-up">Max's Chicken Souse</h2>
-      <p class="recipe-intro fade-up">In Bahamian culture, chicken souse is more than a meal — it's a healing. Made on Saturday mornings, shared after late nights, served at the table of anyone who needs it. This recipe has been in Max's family as long as the road itself.</p>
-    </div>
-
-    <div class="recipe-tabs fade-up">
-      <button class="recipe-tab active" onclick="switchTab(this, 'ingredients')">Ingredients</button>
-      <button class="recipe-tab" onclick="switchTab(this, 'method')">Method</button>
-      <button class="recipe-tab" onclick="switchTab(this, 'johnnybread')">Johnny Bread</button>
-    </div>
-
-    <div id="ingredients" class="recipe-panel active fade-up">
-      <ul class="ingredient-list">
-        <li><span class="ingredient-name">Whole chicken, cut into pieces</span><span class="ingredient-amount">3 lbs</span></li>
-        <li><span class="ingredient-name">Lime juice, freshly squeezed</span><span class="ingredient-amount">3 limes</span></li>
-        <li><span class="ingredient-name">White potatoes, cubed</span><span class="ingredient-amount">2 large</span></li>
-        <li><span class="ingredient-name">White onion, sliced thin</span><span class="ingredient-amount">1 large</span></li>
-        <li><span class="ingredient-name">Bird pepper (Bahamian hot pepper)</span><span class="ingredient-amount">1–2, whole</span></li>
-        <li><span class="ingredient-name">Bay leaves</span><span class="ingredient-amount">3 leaves</span></li>
-        <li><span class="ingredient-name">Fresh thyme</span><span class="ingredient-amount">4 sprigs</span></li>
-        <li><span class="ingredient-name">Allspice berries</span><span class="ingredient-amount">6 whole</span></li>
-        <li><span class="ingredient-name">Salt &amp; black pepper</span><span class="ingredient-amount">to taste</span></li>
-        <li><span class="ingredient-name">Water</span><span class="ingredient-amount">8 cups</span></li>
-        <li><span class="ingredient-name">Celery, sliced</span><span class="ingredient-amount">2 stalks</span></li>
-      </ul>
-    </div>
-
-    <div id="method" class="recipe-panel fade-up">
-      <ol class="steps-list">
-        <li>Wash chicken pieces well with lime juice and cold water. Let sit 10 minutes, then rinse again.</li>
-        <li>Bring 8 cups of water to a boil in a large pot. Add chicken, bay leaves, allspice, and thyme.</li>
-        <li>Reduce heat to medium. Skim any foam from the surface as the broth builds — this is what clears the broth.</li>
-        <li>After 20 minutes, add onion, celery, and potatoes. Add the whole bird pepper but do not break it — the heat should be felt, not overwhelming.</li>
-        <li>Season with salt and pepper. Cook another 25–30 minutes until potatoes are tender and chicken is falling from the bone.</li>
-        <li>Taste and adjust seasoning. Squeeze in fresh lime juice just before serving. Serve hot with Johnny Bread.</li>
-      </ol>
-    </div>
-
-    <div id="johnnybread" class="recipe-panel fade-up">
-      <ul class="ingredient-list">
-        <li><span class="ingredient-name">All-purpose flour</span><span class="ingredient-amount">2 cups</span></li>
-        <li><span class="ingredient-name">Baking powder</span><span class="ingredient-amount">1 tbsp</span></li>
-        <li><span class="ingredient-name">Salt</span><span class="ingredient-amount">½ tsp</span></li>
-        <li><span class="ingredient-name">Sugar</span><span class="ingredient-amount">1 tbsp</span></li>
-        <li><span class="ingredient-name">Cold butter, cubed</span><span class="ingredient-amount">2 tbsp</span></li>
-        <li><span class="ingredient-name">Whole milk</span><span class="ingredient-amount">¾ cup</span></li>
-      </ul>
-      <div style="margin-top: 20px; font-size: 15px; color: var(--text-mid); line-height: 1.8; padding: 16px 0; border-top: 1px solid var(--rule);">
-        Mix dry ingredients. Cut in cold butter until crumbly. Add milk and stir until just combined — do not overwork. Pat into a round about ¾-inch thick. Cook on a lightly oiled griddle over medium heat, 6–8 minutes per side, until golden. Tear by hand and serve alongside the souse.
+      <div class="devotion-question fade-up">
+        Is there something in your life — a meal, a place, a memory — that carries more than its surface? That holds
+        comfort, healing, and belonging all at once?
       </div>
-    </div>
-  </div>
 
-  <div class="recipe-aside fade-up">
-    <div class="recipe-aside-title">A Bowl of Grace on a Saturday Morning</div>
-    <p>In Bimini, they say you can tell how someone was raised by how they make their souse. Whether they use chicken or sheep tongue, whether the broth runs clear or cloudy, whether they add too much pepper or just enough — it all tells a story.</p>
-    <p>Max's souse is his mother's recipe, adjusted over years behind the wheel. He'd make a pot on Saturday mornings and offer it to anyone who came to the taxi stand — paying passengers, broke travelers, neighbours who just needed a warm bowl.</p>
-    <div class="recipe-aside-quote">"The road will wear you down. But a bowl of souse and an open Bible? That's enough for any mile."</div>
-    <div class="johnnybread-note">
-      <strong>On Johnny Bread:</strong> Don't buy it. Make it. The whole point of Johnny Bread is that it's made with your hands, not your wallet. Tear it apart and dip it into the broth. That's the tradition.
-    </div>
-  </div>
-</section>
-
-<!-- AUTHORS -->
-<section id="authors">
-  <div class="author-image fade-up">
-    <img src="assets/authors-photo.png" alt="Cleveland Maxwell 'Max' Rolle and Karenda Samantha Rolle" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-  </div>
-  <div>
-    <div class="section-label fade-up">The Authors</div>
-    <div class="author-block fade-up">
-      <h3 class="author-name">Cleveland Maxwell "Max" Rolle</h3>
-      <div class="author-role">Co-Author · Taxi Driver · Tour Operator · Bimini, Bahamas</div>
-      <p class="author-bio">Max grew up on the island of Bimini, where the water is close and the road is short but the stories run deep. He spent over 25 years ferrying tourists and locals alike through those miles — until a single encounter in a prison cell changed everything. He met God in the dark, and he has been driving toward the light ever since.</p>
-      <div class="author-quote">"Every passenger is a gift. Every mile is a ministry. I just learned to show up and let God drive the rest."</div>
-    </div>
-    <div class="author-block fade-up">
-      <h3 class="author-name">Karenda Samantha Rolle</h3>
-      <div class="author-role">Co-Author · Writer · Max's Wife</div>
-      <p class="author-bio">Karenda sat across the table from Max and wrote down what she heard — not just the stories, but the grace buried inside them. She gave voice and shape to decades of ordinary road moments that turned out to be anything but. This book is her husband's testimony, told through her pen, offered to anyone willing to read.</p>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- EDITOR -->
-<section id="editor" style="background: var(--navy); padding: 96px 80px;">
-  <div style="display:grid; grid-template-columns: 320px 1fr; gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto;">
-    <div style="position:relative;" class="fade-up">
-      <img src="assets/editor-photo.png" alt="Cassandra Nasha Isidore" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block;">
-      <div style="position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top, oklch(0.22 0.028 248), transparent);"></div>
-    </div>
-    <div class="fade-up">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:12px;">
-        <span style="display:block;width:32px;height:1px;background:var(--gold);opacity:0.5;"></span>
-        The Editor
+      <div class="devotion-story fade-up">
+        <p>Chicken souse is a traditional dish in The Bahamas that is more than just a tasty meal. To the Bahamians, it
+          represents comfort, healing, and togetherness in a bowl. This light, flavorful broth of chicken, potatoes,
+          onions, lime, and peppers has soothed generations — offering warmth on early mornings, laughter at family
+          gatherings, and comfort during life's harder moments.</p>
+        <p style="margin-top: 16px;">For Max, chicken souse has been part of his story from the very beginning. He grew
+          up on it, perfected his recipe over time, and now views it as a reflection of life itself.</p>
       </div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,42px);font-weight:500;color:var(--cream);line-height:1.2;margin-bottom:6px;">Cassandra Nasha<br><em style="font-style:italic;">Isidore</em></h2>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra);margin-bottom:32px;">The Grow and Glow Tribe Ministry</div>
-      <blockquote style="font-family:'Playfair Display',serif;font-size:clamp(17px,1.8vw,22px);font-style:italic;color:var(--cream);line-height:1.65;margin:0 0 32px;padding:28px 32px;border-left:3px solid var(--terra);background:oklch(0.30 0.03 248);">
-        "God has invested a great deal in you. Work excellence at whatever level He has given to you. As you work, the investment will multiply, all for His glory."
-      </blockquote>
-      <p style="font-size:16px;color:oklch(0.72 0.02 240);line-height:1.8;">Cassandra is a devoted follower of Christ, writer, and educator who has served as a pastor's wife for over thirteen years. As the founder of the Grow and Glow Tribe, she draws from personal experiences and biblical truths to encourage Christians to walk closely with God and embrace their God-given purpose. Her heart is to inspire others to grow in grace, trust God fully, and walk in the freedom found in Christ.</p>
-    </div>
-  </div>
-</section>
 
-<hr class="divider">
+      <button class="devotion-read-more fade-up" onclick="toggleDevotion(this)">Continue Reading</button>
 
-<!-- ORDER -->
-<section id="order">
-  <div class="section-label fade-up">Get Your Copy</div>
-  <h2 class="section-title fade-up">Order <em style="font-style: italic;">Chicken Souse for Life's Journey</em></h2>
-  <p class="section-body fade-up">Available locally in Bimini and ships internationally. Place your order below or reach out directly — we'll get your copy to you, wherever the road has taken you.</p>
-
-  <div class="order-grid">
-    <div class="order-info fade-up">
-      <p>This is a small, independent devotional published with love in the Bahamas. Orders are handled personally by the Rolle family — expect a reply within 24 hours.</p>
-
-      <div class="order-contact-item">
-        <div class="order-contact-icon">
-          <svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+      <div class="devotion-expanded fade-up" id="devotion-expanded">
+        <div class="devotion-story" style="margin-top: 24px;">
+          <p>Within these pages, you will find devotionals born out of real experiences. They speak to moments of
+            waiting, trusting, forgiving, and seeing God's hand in unexpected places. Whether you savor one reflection
+            at a time, linger in prayer, or return to the stories that speak to your heart, may each page nourish you
+            with fresh hope and gratitude.</p>
+          <p style="margin-top: 16px;">Life, much like chicken souse, is best when shared. It is a blend of joy and
+            struggle, lessons and laughter, all simmered together under God's watchful care.</p>
         </div>
-        <span>WhatsApp: <a class="order-contact-link" href="https://wa.me/12424422629">+1 (242) 442-2629</a></span>
-      </div>
-      <div class="order-contact-item">
-        <div class="order-contact-icon">
-          <svg viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/></svg>
+        <div class="devotion-question" style="margin-top: 24px; font-size: 18px;">
+          <strong
+            style="font-style: normal; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Cormorant Garamond', serif; color: var(--terra);">Closing
+            Prayer</strong><br><br>
+          Lord, let these pages serve as a bowl of warmth and faith. Remind us that no matter where this journey takes
+          us, You are always present — seasoning every moment with grace, humor, and hope. So we come and taste. One
+          story. One prayer. One lesson at a time. Amen.
         </div>
-        <span>Email: <a class="order-contact-link" href="mailto:hello@chickensouseforlife.com">hello@chickensouseforlife.com</a></span>
-      </div>
-
-      <div class="order-availability">
-        <h4>Availability</h4>
-        <p>Available locally in Bimini, Bahamas. Ships internationally — contact us for shipping rates to your destination. Bulk orders for churches, small groups, and gifting are welcome.</p>
       </div>
     </div>
 
-    <div class="fade-up">
-      <div class="order-form" id="order-form-container">
-        <div class="form-title">Request Your Copy</div>
-        <form id="order-form" onsubmit="submitForm(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="fname">First Name</label>
-              <input class="form-input" type="text" id="fname" placeholder="Grace" required>
+    <div class="devotion-sidebar">
+      <div class="scripture-card fade-up">
+        <div class="scripture-card-eyebrow">Today's Scripture</div>
+        <p class="scripture-text">"Taste and see that the Lord is good; blessed is the one who takes refuge in him."</p>
+        <div class="scripture-ref">Psalm 34:8</div>
+      </div>
+      <div
+        style="background: var(--cream-mid); padding: 28px 32px; font-size: 15px; color: var(--text-mid); line-height: 1.7;"
+        class="fade-up">
+        <strong
+          style="display: block; font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 12px;">Each
+          Devotion Includes</strong>
+        A thought-provoking question · A real story from the road · A scripture · A closing prayer
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SCRIPTURE HIGHLIGHT -->
+  <div id="scripture-highlight">
+    <div class="scripture-hl-eyebrow">Foundation Scripture</div>
+    <p class="scripture-hl-text">"Whatever you do, work at it with all your heart, as working for the Lord, not for
+      human masters."</p>
+    <div class="scripture-hl-ref">Colossians 3:23 · The Road Verse of Every Mile</div>
+  </div>
+
+  <!-- WHAT'S INSIDE -->
+  <section id="whats-inside">
+    <div class="section-label fade-up">What's Inside</div>
+    <h2 class="section-title fade-up" style="text-align: center; margin: 0 auto 8px;">Four Elements.<br>Fifty Devotions.
+    </h2>
+    <p class="section-body fade-up" style="margin: 0 auto; text-align: center;">Every devotion is built around the same
+      four-part structure — simple enough to follow, deep enough to stay with you all day long.</p>
+
+    <div class="elements-grid">
+      <div class="element-card fade-up">
+        <div class="element-num">01</div>
+        <div class="element-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M11 7 v4 l3 2" />
+          </svg>
+        </div>
+        <div class="element-name">The Question</div>
+        <p class="element-desc">A thought-provoking prompt to open your heart before the story begins.</p>
+      </div>
+      <div class="element-card fade-up">
+        <div class="element-num">02</div>
+        <div class="element-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <path d="M4 6h14M4 10h10M4 14h12M4 18h8" />
+          </svg>
+        </div>
+        <div class="element-name">The Story</div>
+        <p class="element-desc">A real moment from the road — the kind of story only 25 years of driving can tell.</p>
+      </div>
+      <div class="element-card fade-up">
+        <div class="element-num">03</div>
+        <div class="element-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <path
+              d="M11 3v2M11 17v2M5.636 5.636l1.414 1.414M14.95 14.95l1.414 1.414M3 11h2M17 11h2M5.636 16.364l1.414-1.414M14.95 7.05l1.414-1.414" />
+            <circle cx="11" cy="11" r="4" />
+          </svg>
+        </div>
+        <div class="element-name">The Scripture</div>
+        <p class="element-desc">God's word grounded in the moment, placed alongside each story.</p>
+      </div>
+      <div class="element-card fade-up">
+        <div class="element-num">04</div>
+        <div class="element-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <path d="M11 4v8M11 17v1" />
+            <path d="M6 7.268A7 7 0 1 0 16.5 8" />
+          </svg>
+        </div>
+        <div class="element-name">The Prayer</div>
+        <p class="element-desc">A closing word to carry with you — whether you're behind the wheel or at a crossroads.
+        </p>
+      </div>
+    </div>
+
+    <div
+      style="margin-top: 64px; padding: 40px; background: var(--cream); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;"
+      class="fade-up">
+      <div>
+        <div
+          style="font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 8px;">
+          Also Included</div>
+        <div style="font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); font-style: italic;">
+          Max's Traditional Bahamian Chicken Souse Recipe</div>
+        <div style="font-size: 15px; color: var(--text-mid); margin-top: 6px;">Plus: Authentic Bahamian Johnny Bread
+        </div>
+      </div>
+      <a href="#recipe" class="btn-outline">See the Recipe ↓</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- RECIPE -->
+  <section id="recipe">
+    <div>
+      <div class="recipe-header">
+        <div class="section-label fade-up">Straight from Bimini</div>
+        <h2 class="section-title fade-up">Max's Chicken Souse</h2>
+        <p class="recipe-intro fade-up">This recipe is shared not only as an instruction but also as an invitation. Like
+          the stories in this book, it has been shaped by time, experience, and care.</p>
+      </div>
+
+      <div class="recipe-tabs fade-up">
+        <button class="recipe-tab active" onclick="switchTab(this, 'ingredients')">Ingredients</button>
+        <button class="recipe-tab" onclick="switchTab(this, 'method')">Method</button>
+        <button class="recipe-tab" onclick="switchTab(this, 'johnnybread')">Johnny Bread</button>
+      </div>
+
+      <div id="ingredients" class="recipe-panel active fade-up">
+        <ul class="ingredient-list">
+          <li><span class="ingredient-name">Chicken parts, preferably wings</span><span class="ingredient-amount">3
+              lbs</span></li>
+          <li><span class="ingredient-name">Potatoes, peeled and diced</span><span class="ingredient-amount">2
+              large</span></li>
+          <li><span class="ingredient-name">Onion, sliced</span><span class="ingredient-amount">1 large</span></li>
+          <li><span class="ingredient-name">Green pepper, sliced</span><span class="ingredient-amount">1 large</span>
+          </li>
+          <li><span class="ingredient-name">Bird, goat, or scotch bonnet peppers</span><span
+              class="ingredient-amount">2, to taste</span></li>
+          <li><span class="ingredient-name">Celery, chopped</span><span class="ingredient-amount">2 stalks
+              (optional)</span></li>
+          <li><span class="ingredient-name">Garlic, minced</span><span class="ingredient-amount">2 cloves</span></li>
+          <li><span class="ingredient-name">Lime juice, freshly squeezed</span><span class="ingredient-amount">3
+              limes</span></li>
+          <li><span class="ingredient-name">Allspice berries</span><span class="ingredient-amount">1 tsp
+              (optional)</span></li>
+          <li><span class="ingredient-name">Salt</span><span class="ingredient-amount">to taste</span></li>
+          <li><span class="ingredient-name">Water</span><span class="ingredient-amount">enough to cover</span></li>
+        </ul>
+      </div>
+
+      <div id="method" class="recipe-panel fade-up">
+        <ol class="steps-list">
+          <li>Wash chicken pieces well with lime juice and cold water. Let sit 10 minutes, then rinse again.</li>
+          <li>Bring 8 cups of water to a boil in a large pot. Add chicken, bay leaves, allspice, and thyme.</li>
+          <li>Reduce heat to medium. Skim any foam from the surface as the broth builds — this is what clears the broth.
+          </li>
+          <li>After 20 minutes, add onion, celery, and potatoes. Add the whole bird pepper but do not break it — the
+            heat should be felt, not overwhelming.</li>
+          <li>Season with salt and pepper. Cook another 25–30 minutes until potatoes are tender and chicken is falling
+            from the bone.</li>
+          <li>Taste and adjust seasoning. Squeeze in fresh lime juice just before serving. Serve hot with Johnny Bread.
+          </li>
+        </ol>
+      </div>
+
+      <div id="johnnybread" class="recipe-panel fade-up">
+        <p style="font-size:14px;color:var(--text-light);font-style:italic;margin-bottom:20px;">Adapted from Karenda's
+          sister, Leona Hylton</p>
+        <ul class="ingredient-list">
+          <li><span class="ingredient-name">Flour</span><span class="ingredient-amount">3 cups</span></li>
+          <li><span class="ingredient-name">Baking powder</span><span class="ingredient-amount">3 tsp</span></li>
+          <li><span class="ingredient-name">Butter or margarine</span><span class="ingredient-amount">1 stick</span>
+          </li>
+          <li><span class="ingredient-name">Eggs</span><span class="ingredient-amount">2</span></li>
+          <li><span class="ingredient-name">Sugar</span><span class="ingredient-amount">¾ cup</span></li>
+          <li><span class="ingredient-name">Water</span><span class="ingredient-amount">1 cup</span></li>
+          <li><span class="ingredient-name">Grated coconut</span><span class="ingredient-amount">½ cup (optional)</span>
+          </li>
+        </ul>
+        <div
+          style="margin-top: 20px; font-size: 15px; color: var(--text-mid); line-height: 1.8; padding: 16px 0; border-top: 1px solid var(--rule);">
+          Preheat oven to 350°F and grease a baking pan. Sift together the flour and baking powder. Cream the butter
+          and sugar until smooth. Add the eggs one at a time, mixing well after each. Gradually add the dry
+          ingredients, alternating with the water, mixing until just combined. Fold in coconut if using. Pour into the
+          prepared pan and bake 35–45 minutes, until a toothpick comes out clean. Cool slightly before slicing.
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-aside fade-up">
+      <div class="recipe-aside-title">An Invitation</div>
+      <p>This recipe is shared not only as an instruction but also as an invitation. Like the stories in this book, it
+        has been shaped by time, experience, and care.</p>
+      <p>In The Bahamas, chicken souse is more than a meal — it represents comfort, healing, and togetherness in a bowl.
+        This light, flavorful broth has soothed generations, offering warmth on early mornings, laughter at family
+        gatherings, and comfort during life's harder moments.</p>
+      <div class="johnnybread-note">
+        <strong>On Johnny Bread:</strong> This recipe was created with care by Karenda's sister, Leona, and shaped along
+        the way to sit perfectly beside Max's chicken souse.
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHORS -->
+  <section id="authors">
+    <div class="author-image fade-up">
+      <img src="assets/author-photo-2.jpeg" alt="Cleveland Maxwell 'Max' Rolle and Karenda Samantha Rolle"
+        style="width:100%;height:100%;object-fit:cover;object-position:left top;">
+    </div>
+    <div>
+      <div class="section-label fade-up">The Authors</div>
+      <div class="author-block fade-up">
+        <h3 class="author-name">Cleveland Maxwell "Max" Rolle</h3>
+        <div class="author-role">Co-Author · Taxi Driver · Tour Operator · Bimini, Bahamas</div>
+        <p class="author-bio">For over 25 years, Cleveland Maxwell Rolle — affectionately known as "Max" — has been more
+          than a taxi driver in his hometown of Bimini, Bahamas. He has been a messenger of hope, a storyteller with
+          humor, and a living example of God's power to turn brokenness into testimony. Once on a path of darkness,
+          Max's life changed forever inside a prison cell, where he encountered the mercy and grace of God. Since then,
+          every mile he drives and every guest he serves has become an opportunity to share light, hope, and truth.</p>
+      </div>
+      <div class="author-block fade-up">
+        <h3 class="author-name">Karenda Samantha Rolle</h3>
+        <div class="author-role">Co-Author · Max's Wife</div>
+        <p class="author-bio">Karenda Samantha Rolle co-authors this devotional alongside her husband, sharing Max's
+          story and life lessons with heartfelt passion that uplifts and inspires.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- EDITOR -->
+  <section id="editor" style="background: var(--navy); padding: 96px 80px;">
+    <div
+      style="display:grid; grid-template-columns: 1fr 320px; gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto;">
+      <div class="fade-up">
+        <div
+          style="font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:12px;">
+          <span style="display:block;width:32px;height:1px;background:var(--gold);opacity:0.5;"></span>
+          The Editor
+        </div>
+        <h2
+          style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,42px);font-weight:500;color:var(--cream);line-height:1.2;margin-bottom:6px;">
+          Cassandra Nasha<br><em style="font-style:italic;">Isidore</em></h2>
+        <div
+          style="font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra);margin-bottom:32px;">
+          The Grow and Glow Tribe Ministry</div>
+        <blockquote
+          style="font-family:'Playfair Display',serif;font-size:clamp(17px,1.8vw,22px);font-style:italic;color:var(--cream);line-height:1.65;margin:0 0 32px;padding:28px 32px;border-left:3px solid var(--terra);background:oklch(0.30 0.03 248);">
+          "God has invested a great deal in you. Work excellence at whatever level He has given to you. As you work, the
+          investment will multiply, all for His glory."
+        </blockquote>
+        <p style="font-size:16px;color:oklch(0.72 0.02 240);line-height:1.8;">Cassandra is a devoted follower of Christ,
+          writer, and educator who has served as a pastor's wife for over thirteen years. As the founder of the Grow and
+          Glow Tribe, she draws from personal experiences and biblical truths to encourage Christians to walk closely
+          with God and embrace their God-given purpose. Her heart is to inspire others to grow in grace, trust God
+          fully, and walk in the freedom found in Christ.</p>
+      </div>
+      <div style="position:relative;" class="fade-up">
+        <img src="assets/editor-photo.png" alt="Cassandra Nasha Isidore"
+          style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block;">
+        <div
+          style="position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top, oklch(0.22 0.028 248), transparent);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ORDER -->
+  <section id="order">
+    <div class="section-label fade-up">Get Your Copy</div>
+    <h2 class="section-title fade-up">Order <em style="font-style: italic;">Chicken Souse for Life's Journey</em></h2>
+    <p class="section-body fade-up">Available locally in Bimini and ships internationally. Place your order below or
+      reach out directly — we'll get your copy to you, wherever the road has taken you.</p>
+
+    <div class="order-grid">
+      <div class="order-info fade-up">
+        <p>This is a small, independent devotional published with love in the Bahamas. Orders are handled personally by
+          the Rolle family — expect a reply within 24 hours.</p>
+
+        <div class="order-contact-item">
+          <div class="order-contact-icon">
+            <svg viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg>
+          </div>
+          <span>WhatsApp: <a class="order-contact-link" href="https://wa.me/12424422629">+1 (242) 442-2629</a></span>
+        </div>
+        <div class="order-contact-item">
+          <div class="order-contact-icon">
+            <svg viewBox="0 0 16 16">
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+            </svg>
+          </div>
+          <span>Email: <a class="order-contact-link"
+              href="mailto:hello@chickensouseforlife.com">hello@chickensouseforlife.com</a></span>
+        </div>
+
+        <div class="order-availability">
+          <h4>Availability</h4>
+          <p>Available locally in Bimini, Bahamas. Ships internationally — contact us for shipping rates to your
+            destination. Bulk orders for churches, small groups, and gifting are welcome.</p>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <div class="order-form" id="order-form-container">
+          <div class="form-title">Request Your Copy</div>
+          <form id="order-form" onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fname">First Name</label>
+                <input class="form-input" type="text" id="fname" placeholder="Grace" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lname">Last Name</label>
+                <input class="form-input" type="text" id="lname" placeholder="Rolle" required>
+              </div>
             </div>
             <div class="form-group">
-              <label class="form-label" for="lname">Last Name</label>
-              <input class="form-input" type="text" id="lname" placeholder="Rolle" required>
+              <label class="form-label" for="email">Email Address</label>
+              <input class="form-input" type="email" id="email" placeholder="you@example.com" required>
             </div>
+            <div class="form-group">
+              <label class="form-label" for="country">Country / Island</label>
+              <input class="form-input" type="text" id="country" placeholder="Bahamas, USA, UK…">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="qty">Copies Requested</label>
+              <select class="form-select" id="qty">
+                <option value="1">1 copy</option>
+                <option value="2">2 copies</option>
+                <option value="3">3 copies</option>
+                <option value="5">5 copies (small group)</option>
+                <option value="10+">10+ copies (bulk / church)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Any Notes or Questions</label>
+              <textarea class="form-textarea" id="message"
+                placeholder="E.g. gift inscription, shipping questions, bulk order details…"></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send My Order Request</button>
+          </form>
+          <div class="form-success" id="form-success">
+            <span class="form-success-icon">✦</span>
+            Thank you — your order request has been received.<br>
+            <span
+              style="font-family: 'Source Serif 4', serif; font-size: 16px; color: var(--text-mid); font-style: normal;">The
+              Rolle family will be in touch within 24 hours.</span>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="email">Email Address</label>
-            <input class="form-input" type="email" id="email" placeholder="you@example.com" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="country">Country / Island</label>
-            <input class="form-input" type="text" id="country" placeholder="Bahamas, USA, UK…">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="qty">Copies Requested</label>
-            <select class="form-select" id="qty">
-              <option value="1">1 copy</option>
-              <option value="2">2 copies</option>
-              <option value="3">3 copies</option>
-              <option value="5">5 copies (small group)</option>
-              <option value="10+">10+ copies (bulk / church)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="message">Any Notes or Questions</label>
-            <textarea class="form-textarea" id="message" placeholder="E.g. gift inscription, shipping questions, bulk order details…"></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send My Order Request</button>
-        </form>
-        <div class="form-success" id="form-success">
-          <span class="form-success-icon">✦</span>
-          Thank you — your order request has been received.<br>
-          <span style="font-family: 'Source Serif 4', serif; font-size: 16px; color: var(--text-mid); font-style: normal;">The Rolle family will be in touch within 24 hours.</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-        <img src="assets/logo.png" alt="Chicken Souse for Life logo" style="width:36px;height:36px;object-fit:contain;filter:brightness(0) invert(1) opacity(0.7);">
-        <div class="footer-brand-name">Chicken Souse for Life's Journey</div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <img src="assets/logo.png" alt="Chicken Souse for Life logo"
+            style="width:36px;height:36px;object-fit:contain;filter:brightness(0) invert(1) opacity(0.7);">
+          <div class="footer-brand-name">Chicken Souse for Life's Journey</div>
+        </div>
+        <div class="footer-brand-tagline">Nourishment for the soul, strength for the journey.</div>
+        <p class="footer-brand-desc">A devotional series rooted in the culture and roads of Bimini, The Bahamas. 45
+          devotions. Real stories. One very good recipe.</p>
       </div>
-      <div class="footer-brand-tagline">Nourishment for the soul, strength for the journey.</div>
-      <p class="footer-brand-desc">A devotional series rooted in the culture and roads of Bimini, The Bahamas. 45 devotions. Real stories. One very good recipe.</p>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="#devotion">The Book</a></li>
+          <li><a href="#whats-inside">What's Inside</a></li>
+          <li><a href="#recipe">The Recipe</a></li>
+          <li><a href="#editor">The Editor</a></li>
+          <li><a href="#authors">The Authors</a></li>
+          <li><a href="#order">Order a Copy</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@chickensouseforlife.com">hello@chickensouseforlife.com</a></li>
+          <li><a href="#">WhatsApp Us</a></li>
+          <li><a href="#">Bulk Orders</a></li>
+          <li><a href="#">Churches &amp; Groups</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">From Bimini</div>
+        <ul class="footer-links">
+          <li><a href="#">Bimini, Bahamas</a></li>
+          <li><a href="#">Ships Worldwide</a></li>
+          <li><a href="#">Available Locally</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <div class="footer-col-title">Navigate</div>
-      <ul class="footer-links">
-        <li><a href="#devotion">The Book</a></li>
-        <li><a href="#whats-inside">What's Inside</a></li>
-        <li><a href="#recipe">The Recipe</a></li>
-        <li><a href="#editor">The Editor</a></li>
-        <li><a href="#authors">The Authors</a></li>
-        <li><a href="#order">Order a Copy</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 Cleveland Maxwell Rolle &amp; Karenda Samantha Rolle. All rights reserved.</div>
+      <div class="footer-verse">Colossians 3:23 · Whatever you do, work at it with all your heart.</div>
     </div>
-    <div>
-      <div class="footer-col-title">Contact</div>
-      <ul class="footer-links">
-        <li><a href="mailto:hello@chickensouseforlife.com">hello@chickensouseforlife.com</a></li>
-        <li><a href="#">WhatsApp Us</a></li>
-        <li><a href="#">Bulk Orders</a></li>
-        <li><a href="#">Churches &amp; Groups</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">From Bimini</div>
-      <ul class="footer-links">
-        <li><a href="#">Bimini, Bahamas</a></li>
-        <li><a href="#">Ships Worldwide</a></li>
-        <li><a href="#">Available Locally</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-copy">© 2024 Cleveland Maxwell Rolle &amp; Karenda Samantha Rolle. All rights reserved.</div>
-    <div class="footer-verse">Colossians 3:23 · Whatever you do, work at it with all your heart.</div>
-  </div>
-</footer>
+  </footer>
 
-<script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
 
-<script>
-  // Nav scroll
-  const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 20);
-  });
-
-  // Fade-up observer
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(el => {
-      if (el.isIntersecting) {
-        el.target.classList.add('visible');
-        observer.unobserve(el.target);
-      }
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  // Devotion expand
-  function toggleDevotion(btn) {
-    const expanded = document.getElementById('devotion-expanded');
-    const isOpen = expanded.classList.contains('open');
-    expanded.classList.toggle('open');
-    btn.textContent = isOpen ? 'Continue Reading' : 'Close';
-    btn.style.setProperty('--after-content', isOpen ? '"→"' : '"↑"');
-  }
+    // Fade-up observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) {
+          el.target.classList.add('visible');
+          observer.unobserve(el.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  // Recipe tabs
-  function switchTab(btn, panel) {
-    document.querySelectorAll('.recipe-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.recipe-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(panel).classList.add('active');
-  }
-
-  // Form submit
-  function submitForm(e) {
-    e.preventDefault();
-    document.getElementById('order-form').style.display = 'none';
-    document.getElementById('form-success').classList.add('show');
-  }
-</script>
-
-<script type="text/babel">
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accentColor": "#C4622D",
-  "headlineFont": "Playfair Display",
-  "heroTagline": "Nourishment for the soul, strength for the journey.",
-  "showRecipe": true,
-  "bgTone": "warm"
-}/*EDITMODE-END*/;
-
-function TweaksApp() {
-  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
-
-  React.useEffect(() => {
-    document.documentElement.style.setProperty('--terra', tweaks.accentColor);
-  }, [tweaks.accentColor]);
-
-  React.useEffect(() => {
-    document.querySelectorAll('.hero-title, .section-title, .author-name, .footer-brand-name, .scripture-text, .book-cover-title').forEach(el => {
-      el.style.fontFamily = `'${tweaks.headlineFont}', Georgia, serif`;
-    });
-  }, [tweaks.headlineFont]);
-
-  React.useEffect(() => {
-    const el = document.querySelector('.hero-tagline');
-    if (el) el.textContent = `"${tweaks.heroTagline}"`;
-  }, [tweaks.heroTagline]);
-
-  React.useEffect(() => {
-    const recipe = document.getElementById('recipe');
-    if (recipe) recipe.style.display = tweaks.showRecipe ? '' : 'none';
-  }, [tweaks.showRecipe]);
-
-  React.useEffect(() => {
-    const root = document.documentElement;
-    if (tweaks.bgTone === 'warm') {
-      root.style.setProperty('--cream', 'oklch(0.975 0.013 82)');
-      root.style.setProperty('--cream-mid', 'oklch(0.955 0.018 78)');
-    } else if (tweaks.bgTone === 'cool') {
-      root.style.setProperty('--cream', 'oklch(0.975 0.008 220)');
-      root.style.setProperty('--cream-mid', 'oklch(0.958 0.010 215)');
-    } else {
-      root.style.setProperty('--cream', 'oklch(0.975 0.003 0)');
-      root.style.setProperty('--cream-mid', 'oklch(0.958 0.003 0)');
+    // Devotion expand
+    function toggleDevotion(btn) {
+      const expanded = document.getElementById('devotion-expanded');
+      const isOpen = expanded.classList.contains('open');
+      expanded.classList.toggle('open');
+      btn.textContent = isOpen ? 'Continue Reading' : 'Close';
+      btn.style.setProperty('--after-content', isOpen ? '"→"' : '"↑"');
     }
-  }, [tweaks.bgTone]);
 
-  return (
-    <TweaksPanel title="Tweaks">
-      <TweakColor
-        label="Accent Color"
-        value={tweaks.accentColor}
-        onChange={v => setTweak('accentColor', v)}
-      />
-      <TweakSelect
-        label="Headline Font"
-        value={tweaks.headlineFont}
-        options={["Playfair Display","Cormorant Garamond","Georgia","Garamond","Palatino Linotype"]}
-        onChange={v => setTweak('headlineFont', v)}
-      />
-      <TweakRadio
-        label="Background Tone"
-        value={tweaks.bgTone}
-        options={["warm","cool","neutral"]}
-        onChange={v => setTweak('bgTone', v)}
-      />
-      <TweakText
-        label="Hero Tagline"
-        value={tweaks.heroTagline}
-        onChange={v => setTweak('heroTagline', v)}
-      />
-      <TweakToggle
-        label="Show Recipe Section"
-        value={tweaks.showRecipe}
-        onChange={v => setTweak('showRecipe', v)}
-      />
-    </TweaksPanel>
-  );
-}
+    // Recipe tabs
+    function switchTab(btn, panel) {
+      document.querySelectorAll('.recipe-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.recipe-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(panel).classList.add('active');
+    }
 
-ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<TweaksApp/>);
-</script>
+    // Form submit
+    function submitForm(e) {
+      e.preventDefault();
+      document.getElementById('order-form').style.display = 'none';
+      document.getElementById('form-success').classList.add('show');
+    }
+  </script>
 
-<div id="tweaks-root"></div>
+  <script type="text/babel">
+    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "accentColor": "#C4622D",
+      "headlineFont": "Playfair Display",
+      "heroTagline": "Nourishment for the soul, strength for the journey.",
+      "showRecipe": true,
+      "bgTone": "warm"
+    }/*EDITMODE-END*/;
+
+    function TweaksApp() {
+      const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+      React.useEffect(() => {
+        document.documentElement.style.setProperty('--terra', tweaks.accentColor);
+      }, [tweaks.accentColor]);
+
+      React.useEffect(() => {
+        document.querySelectorAll('.hero-title, .section-title, .author-name, .footer-brand-name, .scripture-text, .book-cover-title').forEach(el => {
+          el.style.fontFamily = `'${tweaks.headlineFont}', Georgia, serif`;
+        });
+      }, [tweaks.headlineFont]);
+
+      React.useEffect(() => {
+        const el = document.querySelector('.hero-tagline');
+        if (el) el.textContent = `"${tweaks.heroTagline}"`;
+      }, [tweaks.heroTagline]);
+
+      React.useEffect(() => {
+        const recipe = document.getElementById('recipe');
+        if (recipe) recipe.style.display = tweaks.showRecipe ? '' : 'none';
+      }, [tweaks.showRecipe]);
+
+      React.useEffect(() => {
+        const root = document.documentElement;
+        if (tweaks.bgTone === 'warm') {
+          root.style.setProperty('--cream', 'oklch(0.975 0.013 82)');
+          root.style.setProperty('--cream-mid', 'oklch(0.955 0.018 78)');
+        } else if (tweaks.bgTone === 'cool') {
+          root.style.setProperty('--cream', 'oklch(0.975 0.008 220)');
+          root.style.setProperty('--cream-mid', 'oklch(0.958 0.010 215)');
+        } else {
+          root.style.setProperty('--cream', 'oklch(0.975 0.003 0)');
+          root.style.setProperty('--cream-mid', 'oklch(0.958 0.003 0)');
+        }
+      }, [tweaks.bgTone]);
+
+      return (
+        <TweaksPanel title="Tweaks">
+          <TweakColor
+            label="Accent Color"
+            value={tweaks.accentColor}
+            onChange={v => setTweak('accentColor', v)}
+          />
+          <TweakSelect
+            label="Headline Font"
+            value={tweaks.headlineFont}
+            options={["Playfair Display", "Cormorant Garamond", "Georgia", "Garamond", "Palatino Linotype"]}
+            onChange={v => setTweak('headlineFont', v)}
+          />
+          <TweakRadio
+            label="Background Tone"
+            value={tweaks.bgTone}
+            options={["warm", "cool", "neutral"]}
+            onChange={v => setTweak('bgTone', v)}
+          />
+          <TweakText
+            label="Hero Tagline"
+            value={tweaks.heroTagline}
+            onChange={v => setTweak('heroTagline', v)}
+          />
+          <TweakToggle
+            label="Show Recipe Section"
+            value={tweaks.showRecipe}
+            onChange={v => setTweak('showRecipe', v)}
+          />
+        </TweaksPanel>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<TweaksApp />);
+  </script>
+
+  <div id="tweaks-root"></div>
 
 </body>
+
 </html>
