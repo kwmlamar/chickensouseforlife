@@ -626,15 +626,142 @@ footer {
 .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
 
+/* ===== TABLET ===== */
 @media (max-width: 1024px) {
   nav { padding: 0 24px; }
+  .nav-links { gap: 20px; }
   #hero, #devotion, #recipe, #authors, .order-grid {
     grid-template-columns: 1fr;
   }
+  #hero { min-height: auto; }
   #hero .hero-image { height: 60vw; min-height: 320px; }
+  .hero-text { padding: 60px 40px; }
   section { padding: 64px 32px; }
   #intro-band { padding: 40px 24px; gap: 0; }
   .elements-grid { grid-template-columns: repeat(2, 1fr); }
+  #devotion { gap: 48px; }
+  .devotion-sidebar { position: static; }
+  #recipe { gap: 48px; }
+  #authors { gap: 48px; }
+  .author-image { max-height: 500px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  #scripture-highlight { padding: 56px 32px; }
+  footer { padding: 48px 32px 32px; }
+  /* Editor section inline grid */
+  #editor { padding: 64px 32px !important; }
+  #editor > div { grid-template-columns: 1fr !important; gap: 48px !important; }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  /* NAV */
+  nav { padding: 0 16px; height: 60px; }
+  nav img { width: 40px !important; height: 40px !important; }
+  .nav-logo { font-size: 11px; letter-spacing: 0.12em; }
+  .nav-links { display: none; }
+  .nav-cta { padding: 8px 16px; font-size: 11px; }
+
+  /* HERO */
+  #hero { padding-top: 60px; }
+  .hero-text {
+    padding: 40px 20px;
+  }
+  .hero-text > img[aria-hidden="true"] {
+    width: 280px !important;
+    height: 280px !important;
+    right: -40px !important;
+  }
+  .hero-title { font-size: clamp(32px, 9vw, 42px); }
+  .hero-subtitle { font-size: 15px; margin-bottom: 20px; }
+  .hero-tagline { font-size: 15px; margin-bottom: 28px; }
+  .hero-buttons { flex-direction: column; gap: 12px; }
+  .btn-primary, .btn-outline { text-align: center; width: 100%; padding: 14px 24px; }
+  #hero .hero-image { height: auto; min-height: 360px; }
+  .book-cover { width: 200px; height: 300px; padding: 24px 16px; }
+  .book-cover-title { font-size: 18px; }
+
+  /* INTRO BAND */
+  #intro-band {
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
+    gap: 28px;
+  }
+  .intro-stat {
+    padding: 16px 0;
+    border-right: none;
+    border-bottom: 1px solid oklch(1 0 0 / 0.1);
+  }
+  .intro-stat:last-child { border-bottom: none; }
+  .intro-stat-num { font-size: 36px; }
+
+  /* SECTIONS */
+  section { padding: 48px 20px; }
+  .section-title { font-size: clamp(26px, 7vw, 36px); }
+  .section-body { font-size: 15px; }
+
+  /* DEVOTION */
+  #devotion { gap: 32px; }
+  .devotion-question { font-size: 18px; padding: 16px 18px; }
+  .devotion-story { font-size: 15px; }
+  .devotion-sidebar { position: static; }
+  .scripture-card { padding: 32px 24px; }
+  .scripture-text { font-size: 17px; }
+
+  /* SCRIPTURE HIGHLIGHT */
+  #scripture-highlight { padding: 48px 20px; }
+  .scripture-hl-text { font-size: clamp(20px, 6vw, 32px); }
+
+  /* WHAT'S INSIDE */
+  .elements-grid {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    margin-top: 40px;
+  }
+  .element-card { padding: 32px 24px; }
+  .element-num { font-size: 36px; margin-bottom: 14px; }
+  .element-name { font-size: 18px; }
+
+  /* RECIPE */
+  #recipe { gap: 32px; }
+  .recipe-tabs { flex-wrap: wrap; }
+  .recipe-tab { padding: 10px 16px; font-size: 12px; letter-spacing: 0.1em; }
+  .recipe-aside { padding: 32px 24px; }
+  .recipe-aside-title { font-size: 22px; }
+  .ingredient-list li { font-size: 14px; }
+
+  /* AUTHORS */
+  #authors { gap: 32px; }
+  .author-image { max-height: 400px; }
+  .author-name { font-size: 22px; }
+  .author-bio { font-size: 14px; }
+  .author-block { margin-bottom: 32px; }
+
+  /* EDITOR */
+  #editor { padding: 48px 20px !important; }
+  #editor > div {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  #editor > div > div:first-child {
+    max-width: 100% !important;
+  }
+
+  /* ORDER */
+  .order-grid { gap: 32px; }
+  .order-form { padding: 24px; }
+  .form-title { font-size: 20px; margin-bottom: 20px; }
+  .form-row { grid-template-columns: 1fr; }
+  .order-contact-item { font-size: 13px; }
+  .order-contact-item a { word-break: break-all; }
+
+  /* FOOTER */
+  footer { padding: 40px 20px 28px; }
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-brand-name { font-size: 18px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .footer-copy, .footer-verse { font-size: 12px; }
 }
