@@ -106,9 +106,14 @@ nav.scrolled { box-shadow: 0 2px 24px oklch(0.22 0.028 248 / 0.08); }
 }
 .hero-tagline {
   font-size: 17px; color: var(--text-mid);
-  margin-bottom: 40px; max-width: 380px;
+  margin-bottom: 20px; max-width: 380px;
   border-left: 2px solid var(--gold); padding-left: 18px;
   font-style: italic;
+}
+.hero-description {
+  font-size: 15px; color: var(--text-light);
+  line-height: 1.75; max-width: 400px;
+  margin-bottom: 36px;
 }
 .btn-primary {
   display: inline-block;
