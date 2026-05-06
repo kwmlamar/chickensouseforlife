@@ -348,6 +348,13 @@ hr.divider {
   transition: background 0.25s, border-color 0.25s;
 }
 .element-icon svg { width: 22px; height: 22px; }
+.element-icon i {
+  font-size: 24px;
+  line-height: 1;
+  color: var(--navy);
+  transition: color 0.25s;
+}
+.element-card:hover .element-icon i { color: var(--cream); }
 .element-name {
   font-family: 'Playfair Display', serif;
   font-size: 20px; color: var(--navy); margin-bottom: 12px;
