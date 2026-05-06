@@ -78,9 +78,18 @@ nav.scrolled { box-shadow: 0 2px 24px oklch(0.22 0.028 248 / 0.08); }
   text-transform: uppercase; color: var(--terra);
   margin-bottom: 28px;
   display: flex; align-items: center; gap: 12px;
+  transition: all 0.4s ease;
+  cursor: default;
 }
 .hero-label::before {
   content: ''; display: block; width: 32px; height: 1px; background: var(--terra);
+  transition: width 0.4s ease;
+}
+.hero-label:hover {
+  letter-spacing: 0.26em;
+}
+.hero-label:hover::before {
+  width: 48px;
 }
 .hero-title {
   font-family: 'Playfair Display', Georgia, serif;
