@@ -115,6 +115,13 @@ nav.scrolled { box-shadow: 0 2px 24px oklch(0.22 0.028 248 / 0.08); }
   line-height: 1.75; max-width: 400px;
   margin-bottom: 36px;
 }
+.hero-support {
+  font-size: 13px; color: var(--text-light);
+  margin-top: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.06em;
+  font-style: italic;
+}
 .btn-primary {
   display: inline-block;
   font-family: 'Cormorant Garamond', serif;
