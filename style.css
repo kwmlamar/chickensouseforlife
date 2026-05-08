@@ -4,8 +4,12 @@
   --cream-deep: oklch(0.930 0.025 74);
   --navy: oklch(0.22 0.028 248);
   --navy-mid: oklch(0.38 0.025 245);
+  /* Burnt Orange — primary accent (original) */
   --terra: oklch(0.58 0.115 46);
+  --terra-hover: oklch(0.52 0.115 46);  /* darker orange for hover */
   --terra-light: oklch(0.88 0.055 50);
+  /* Driftwood Brown — hero title */
+  --driftwood: oklch(0.52 0.065 58);    /* warm weathered brown */
   --gold: oklch(0.74 0.095 84);
   --gold-light: oklch(0.92 0.045 84);
   --text: oklch(0.22 0.020 248);
@@ -59,7 +63,7 @@ nav.scrolled { box-shadow: 0 2px 24px oklch(0.22 0.028 248 / 0.08); }
   padding: 10px 24px; border: none; cursor: pointer;
   transition: background 0.2s;
 }
-.nav-cta:hover { background: oklch(0.52 0.115 46); }
+.nav-cta:hover { background: var(--terra-hover); }
 
 /* HERO */
 #hero {
