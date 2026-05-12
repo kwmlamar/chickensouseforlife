@@ -2,11 +2,11 @@
   --cream: oklch(0.975 0.013 82);
   --cream-mid: oklch(0.955 0.018 78);
   --cream-deep: oklch(0.930 0.025 74);
-  --navy: oklch(0.22 0.028 248);
-  --navy-mid: oklch(0.38 0.025 245);
-  /* Burnt Orange — primary accent (original) */
-  --terra: oklch(0.58 0.115 46);
-  --terra-hover: oklch(0.52 0.115 46);  /* darker orange for hover */
+  --navy: oklch(0.28 0.07 248);
+  --navy-mid: oklch(0.42 0.06 246);
+  /* Burnt Amber — primary accent */
+  --terra: oklch(0.61 0.135 46);
+  --terra-hover: oklch(0.54 0.135 46);  /* darker amber for hover */
   --terra-light: oklch(0.88 0.055 50);
   /* Driftwood Brown — hero title */
   --driftwood: oklch(0.52 0.065 58);    /* warm weathered brown */
@@ -41,7 +41,7 @@ nav {
   border-bottom: 1px solid var(--rule);
   transition: box-shadow 0.3s;
 }
-nav.scrolled { box-shadow: 0 2px 24px oklch(0.22 0.028 248 / 0.08); }
+nav.scrolled { box-shadow: 0 2px 24px oklch(0.28 0.07 248 / 0.08); }
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
   font-size: 13px; font-weight: 600; letter-spacing: 0.18em;
@@ -173,8 +173,8 @@ nav.scrolled { box-shadow: 0 2px 24px oklch(0.22 0.028 248 / 0.08); }
 }
 .book-cover {
   width: 260px; height: 380px;
-  background: oklch(0.22 0.028 248);
-  box-shadow: 24px 32px 64px oklch(0.22 0.028 248 / 0.35), 4px 4px 0 oklch(0.58 0.115 46);
+  background: var(--navy);
+  box-shadow: 24px 32px 64px oklch(0.28 0.07 248 / 0.35), 4px 4px 0 var(--terra);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   padding: 32px 24px; text-align: center; position: relative;
   border-top: 6px solid var(--terra);
@@ -298,7 +298,7 @@ hr.divider {
   position: sticky; top: 100px;
 }
 .scripture-card {
-  background: oklch(0.32 0.035 248);
+  background: oklch(0.36 0.068 248);
   padding: 48px 40px; text-align: center; margin-bottom: 24px;
 }
 .scripture-card-eyebrow {
@@ -343,14 +343,14 @@ hr.divider {
   cursor: default;
 }
 .element-card:hover {
-  background: oklch(0.22 0.028 248);
+  background: var(--navy);
   transform: translateY(-4px);
 }
 .element-card:hover .element-num,
 .element-card:hover .element-name,
 .element-card:hover .element-desc { color: var(--cream); }
 .element-card:hover .element-num { color: var(--gold); }
-.element-card:hover .element-icon { background: oklch(0.30 0.03 248); border-color: oklch(0.30 0.03 248); }
+.element-card:hover .element-icon { background: oklch(0.34 0.065 248); border-color: oklch(0.34 0.065 248); }
 .element-num {
   font-family: 'Playfair Display', serif;
   font-size: 48px; font-style: italic; font-weight: 400;
@@ -397,9 +397,9 @@ hr.divider {
 .book-section-card {
   display: flex; gap: 32px; align-items: flex-start;
   padding: 40px 0;
-  border-top: 1px solid oklch(0.30 0.03 248);
+  border-top: 1px solid oklch(0.34 0.065 248);
 }
-.book-section-card:last-child { border-bottom: 1px solid oklch(0.30 0.03 248); }
+.book-section-card:last-child { border-bottom: 1px solid oklch(0.34 0.065 248); }
 .book-section-num {
   font-family: 'Cormorant Garamond', serif;
   font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
@@ -477,7 +477,7 @@ hr.divider {
   line-height: 1;
 }
 .recipe-aside {
-  background: oklch(0.22 0.028 248);
+  background: var(--navy);
   padding: 48px 40px; color: var(--cream);
 }
 .recipe-aside-title {
@@ -497,7 +497,7 @@ hr.divider {
 }
 .johnnybread-note {
   margin-top: 24px; padding: 20px 24px;
-  background: oklch(0.30 0.03 248);
+  background: oklch(0.34 0.065 248);
   font-size: 14px; color: oklch(0.78 0.02 240); line-height: 1.7;
 }
 .johnnybread-note strong { color: var(--gold); font-weight: 500; }
