@@ -747,6 +747,7 @@ footer {
   /* Editor section inline grid */
   #editor { padding: 64px 32px !important; }
   #editor > div { grid-template-columns: 1fr !important; gap: 48px !important; }
+  #editor > div > div:last-child { max-width: 280px; margin: 0 auto; }
   /* Book sections */
   .book-section-card { gap: 20px; }
   .book-section-num { min-width: 64px; }
