@@ -1,0 +1,1057 @@
+/* ==========================================================================
+   sections.css — section layouts (Chunk B)
+   Mobile-first. M = min-width 720px, L = min-width 1040px.
+   Tokens come from style.css (:root). Shared components live in style.css.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. HERO
+   ========================================================================== */
+.hero {
+  display: block;
+}
+
+.hero__text {
+  padding: var(--s-7) var(--gutter) var(--s-7);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__title {
+  font-size: var(--fs-display);
+  font-weight: 500;
+  line-height: .92;
+  letter-spacing: -0.02em;
+  color: var(--teal-900);
+}
+
+.hero__title-main {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  font-size: .82em;
+}
+
+.hero__title-sub {
+  display: block;
+  margin-top: -.08em;
+  padding-left: .9em;
+}
+
+.hero__for {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: .16em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--ink);
+  vertical-align: middle;
+}
+
+.hero__for::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: var(--gold-500);
+  vertical-align: middle;
+  margin-right: .6em;
+}
+
+.hero__life {
+  font-family: var(--font-script);
+  font-size: 1.35em;
+  font-weight: 400;
+  line-height: .8;
+  color: var(--teal-700);
+}
+
+.hero__subtitle {
+  margin-top: var(--s-5);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--fs-h3);
+  color: var(--ink-soft);
+}
+
+.hero__body {
+  margin-top: var(--s-7);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--rule-strong);
+  display: grid;
+  gap: var(--s-4);
+}
+
+.hero__tagline {
+  font-style: italic;
+  font-size: var(--fs-lead);
+  color: var(--teal-700);
+}
+
+.hero__desc {
+  font-size: var(--fs-body);
+  color: var(--ink);
+}
+
+.hero__actions {
+  margin-top: var(--s-6);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-5);
+}
+
+.hero__actions .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.hero__support {
+  margin-top: var(--s-4);
+  color: var(--ink-soft);
+}
+
+.hero__panel {
+  background: var(--teal-700);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: var(--s-8) var(--gutter) var(--s-9);
+}
+
+.hero__rays {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 150%;
+  transform: translateX(-50%);
+  opacity: .95;
+}
+
+.book-cover {
+  position: relative;
+  z-index: 1;
+  width: min(240px, 64%);
+  aspect-ratio: 2 / 3;
+  background: var(--paper);
+  color: var(--teal-900);
+  padding: var(--s-6) var(--s-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transform: rotate(-2.5deg);
+  box-shadow: var(--shadow-hard);
+  border-radius: 0 var(--r) var(--r) 0;
+  border-left: 6px solid var(--teal-900);
+}
+
+.book-cover__label {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--gold-700);
+}
+
+.book-cover__title {
+  margin-top: var(--s-5);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: var(--teal-900);
+}
+
+.book-cover__title span {
+  display: block;
+  font-style: italic;
+  text-transform: none;
+  color: var(--teal-700);
+}
+
+.book-cover__edition {
+  margin-top: var(--s-3);
+  font-style: italic;
+  font-size: var(--fs-small);
+}
+
+.book-cover__rays {
+  width: 62%;
+  margin-top: auto;
+  border-bottom: 1px solid var(--teal-900);
+}
+
+.book-cover__author {
+  margin-top: var(--s-4);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  line-height: 1.5;
+}
+
+@media (min-width: 720px) {
+  .hero__text {
+    padding-inline: var(--gutter);
+  }
+  .hero__actions {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--s-6);
+    flex-wrap: wrap;
+  }
+  .hero__actions .btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 1040px) {
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    min-height: calc(100svh - var(--nav-h));
+    max-height: 900px;
+  }
+  .hero__text {
+    padding: var(--s-9) var(--s-8) var(--s-8) max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
+    justify-content: flex-end;
+  }
+  .hero__body {
+    grid-template-columns: 5fr 7fr;
+    gap: var(--s-6);
+  }
+  .hero__panel {
+    padding: var(--s-8);
+  }
+  .book-cover {
+    width: min(320px, 70%);
+  }
+}
+
+
+/* ==========================================================================
+   2. STATS STRIP
+   ========================================================================== */
+.stats__list {
+  border-top: 3px double var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stats__item {
+  padding: var(--s-5) var(--s-3);
+  border-left: 1px solid var(--rule);
+  text-align: left;
+}
+
+.stats__item:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.stats__num {
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--teal-700);
+}
+
+.stats__label {
+  margin-top: var(--s-2);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 720px) {
+  .stats__item {
+    padding: var(--s-6) var(--s-5);
+  }
+  .stats__item:first-child {
+    padding-left: 0;
+  }
+  .stats__num {
+    font-size: var(--fs-stat);
+  }
+}
+
+
+/* ==========================================================================
+   3. DEVOTION SAMPLE
+   ========================================================================== */
+.devotion__kicker {
+  font-style: italic;
+  font-size: var(--fs-h3);
+  color: var(--teal-700);
+}
+
+.devotion__question {
+  margin-block: var(--s-6);
+  padding-left: var(--s-5);
+  border-left: 3px solid var(--gold-500);
+  font-style: italic;
+  font-size: var(--fs-lead);
+  color: var(--teal-900);
+}
+
+.devotion__story p + p {
+  margin-top: var(--s-4);
+}
+
+.devotion__main > .devotion__story:first-of-type > p:first-child::first-letter {
+  float: left;
+  font-size: 4.2em;
+  line-height: .82;
+  padding: .06em .1em 0 0;
+  color: var(--teal-700);
+  font-weight: 500;
+}
+
+.devotion__toggle {
+  margin-top: var(--s-5);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+#devotion-expanded {
+  margin-top: var(--s-5);
+}
+
+.devotion__prayer {
+  margin-top: var(--s-6);
+  padding: var(--s-5) 0;
+  border-block: 1px solid var(--rule);
+}
+
+.devotion__prayer p:not(.eyebrow) {
+  font-style: italic;
+  font-size: var(--fs-lead);
+}
+
+.devotion__aside {
+  margin-top: var(--s-7);
+}
+
+.devotion__scripture {
+  margin: 0;
+  background: var(--teal-700);
+  color: var(--paper);
+  padding: var(--s-6);
+}
+
+.devotion__scripture .eyebrow {
+  color: var(--gold-100);
+}
+
+.devotion__scripture blockquote {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.375rem;
+  line-height: 1.4;
+}
+
+.devotion__scripture figcaption {
+  margin-top: var(--s-4);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+
+.devotion__includes {
+  margin-top: var(--s-5);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--rule-strong);
+}
+
+.devotion__includes ul {
+  list-style: none;
+}
+
+.devotion__includes li {
+  padding-block: var(--s-2);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-sans);
+  font-size: var(--fs-ui);
+}
+
+@media (min-width: 1040px) {
+  .devotion__head {
+    grid-column: 1 / 9;
+    grid-row: 1;
+  }
+  .devotion__main {
+    grid-column: 1 / 8;
+    grid-row: 2;
+  }
+  .devotion__aside {
+    grid-column: 9 / 13;
+    grid-row: 1 / span 2;
+    margin-top: 0;
+    position: sticky;
+    top: calc(var(--nav-h) + var(--s-6));
+    align-self: start;
+  }
+}
+
+
+/* ==========================================================================
+   4. FOUNDATION SCRIPTURE (VERSE)
+   ========================================================================== */
+.verse {
+  padding: var(--s-9) 0 0;
+  overflow: hidden;
+}
+
+.verse__fig {
+  margin: 0;
+  text-align: center;
+}
+
+.verse .eyebrow {
+  justify-content: center;
+  color: var(--gold-100);
+}
+
+.verse__text {
+  margin: 0 auto;
+  max-width: 44ch;
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--fs-quote);
+  line-height: 1.25;
+  color: var(--paper);
+}
+
+.verse__ref {
+  margin-top: var(--s-5);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--teal-200);
+}
+
+.verse__rays {
+  width: min(520px, 80%);
+  margin: var(--s-7) auto 0;
+}
+
+
+/* ==========================================================================
+   5. WHAT'S INSIDE
+   ========================================================================== */
+.inside__list {
+  list-style: none;
+  margin-top: var(--s-6);
+  border-top: 1px solid var(--rule-strong);
+}
+
+.inside__item {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: var(--s-5);
+  padding-block: var(--s-6);
+  border-bottom: 1px solid var(--rule);
+}
+
+.inside__num {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--gold-700);
+}
+
+.inside__item p {
+  margin-top: var(--s-2);
+  color: var(--ink-soft);
+}
+
+.inside__also {
+  margin-top: var(--s-8);
+  background: var(--teal-900);
+  color: var(--paper);
+  padding: var(--s-6) var(--s-5);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--s-6);
+}
+
+.inside__also .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.inside__also-title {
+  font-style: italic;
+  font-size: var(--fs-h3);
+  line-height: 1.2;
+}
+
+.inside__also-sub {
+  font-family: var(--font-sans);
+  font-size: var(--fs-ui);
+  color: var(--teal-200);
+}
+
+@media (min-width: 720px) {
+  .inside__item {
+    grid-template-columns: 4.5rem 1fr;
+  }
+  .inside__also {
+    padding: var(--s-7);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .inside__also .btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 1040px) {
+  .inside__head {
+    grid-column: 1 / 6;
+    grid-row: 1;
+    position: sticky;
+    top: calc(var(--nav-h) + var(--s-6));
+    align-self: start;
+  }
+  .inside__list {
+    grid-column: 7 / 13;
+    grid-row: 1;
+    margin-top: 0;
+  }
+  .inside__also {
+    grid-column: 1 / 13;
+    grid-row: 2;
+  }
+}
+
+
+/* ==========================================================================
+   6. THE JOURNEY (road centre-line)
+   ========================================================================== */
+.journey__list {
+  list-style: none;
+  position: relative;
+  padding-left: var(--s-6);
+  margin-top: var(--s-6);
+}
+
+.journey__list::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: repeating-linear-gradient(to bottom, var(--teal-700) 0 14px, transparent 14px 26px);
+}
+
+.journey__stop {
+  position: relative;
+  padding-bottom: var(--s-7);
+}
+
+.journey__stop:last-child {
+  padding-bottom: 0;
+}
+
+.journey__stop::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--s-6) * -1);
+  top: 6px;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold-500);
+  border: 3px solid var(--sand);
+  box-shadow: 0 0 0 2px var(--teal-900);
+}
+
+.journey__no {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--gold-700);
+}
+
+.journey__quote {
+  margin: 0;
+}
+
+.journey__quote p {
+  margin-top: var(--s-3);
+  font-style: italic;
+  font-size: var(--fs-lead);
+  color: var(--ink);
+}
+
+.journey__quote cite {
+  display: block;
+  margin-top: var(--s-3);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-small);
+  font-style: normal;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 720px) {
+  .journey__list {
+    padding-left: var(--s-7);
+  }
+  .journey__stop::before {
+    left: calc(var(--s-7) * -1);
+  }
+}
+
+@media (min-width: 1040px) {
+  .journey__head {
+    grid-column: 1 / 5;
+    grid-row: 1;
+    position: sticky;
+    top: calc(var(--nav-h) + var(--s-6));
+    align-self: start;
+  }
+  .journey__list {
+    grid-column: 6 / 13;
+    grid-row: 1;
+    margin-top: 0;
+  }
+}
+
+
+/* ==========================================================================
+   7. RECIPE
+   ========================================================================== */
+.recipe__head {
+  align-items: start;
+}
+
+.recipe__invite {
+  border-top: 3px solid var(--gold-500);
+  padding-top: var(--s-4);
+  align-self: end;
+}
+
+.recipe__invite p:not(.eyebrow) {
+  font-family: var(--font-sans);
+  font-size: var(--fs-ui);
+  color: var(--ink-soft);
+}
+
+.recipe__page {
+  background: var(--white);
+  border: 1px solid var(--teal-900);
+  padding: clamp(24px, 5vw, 64px);
+  margin-top: var(--s-7);
+}
+
+.recipe__page + .recipe__page {
+  margin-top: var(--s-5);
+}
+
+.recipe__page > header {
+  margin-bottom: var(--s-6);
+}
+
+.recipe__credit {
+  margin-top: var(--s-2);
+  font-style: italic;
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.recipe__cols > section + section {
+  margin-top: var(--s-7);
+}
+
+.recipe__label {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--teal-700);
+  padding-bottom: var(--s-3);
+  border-bottom: 2px solid var(--teal-900);
+  margin-bottom: var(--s-3);
+}
+
+.ingredients {
+  list-style: none;
+}
+
+.ingredients li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-2);
+  padding-block: 10px;
+}
+
+.ingredients__name {
+  font-size: var(--fs-body);
+}
+
+.ingredients__dots {
+  flex: 1;
+  min-width: 16px;
+  border-bottom: 2px dotted #B9BDB6;
+  transform: translateY(-4px);
+}
+
+.ingredients__amt {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-ui);
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+.steps {
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: var(--s-4);
+  padding-block: var(--s-4);
+  border-bottom: 1px solid var(--rule);
+}
+
+.steps li::before {
+  content: counter(step);
+  font: italic 400 2.25rem/1 var(--font-serif);
+  color: var(--gold-700);
+}
+
+.recipe__note {
+  margin-top: var(--s-5);
+  background: var(--gold-100);
+  padding: var(--s-4) var(--s-5);
+  border-left: 3px solid var(--gold-500);
+  font-size: var(--fs-ui);
+}
+
+.recipe__note strong,
+.recipe__note b {
+  font-weight: 700;
+}
+
+@media (min-width: 720px) {
+  .ingredients__amt {
+    white-space: nowrap;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1040px) {
+  .recipe__head > div {
+    grid-column: 1 / 8;
+  }
+  .recipe__invite {
+    grid-column: 9 / 13;
+  }
+  .recipe__cols > section:first-child {
+    grid-column: 1 / 6;
+  }
+  .recipe__cols > section:last-child {
+    grid-column: 7 / 13;
+  }
+  .recipe__cols > section + section {
+    margin-top: 0;
+  }
+}
+
+
+/* ==========================================================================
+   8. AUTHORS
+   ========================================================================== */
+.authors {
+  isolation: isolate;
+}
+
+.authors__photos {
+  position: relative;
+  max-width: 620px;
+  padding-right: var(--s-6);
+  padding-bottom: var(--s-7);
+}
+
+.authors__photos::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: var(--s-7);
+  width: 60%;
+  bottom: 0;
+  background: var(--teal-100);
+  z-index: -1;
+}
+
+.authors__photo-main {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.authors__photo-inset {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 38%;
+  max-width: 260px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  border: 8px solid var(--paper);
+}
+
+.authors__bio + .authors__bio {
+  margin-top: var(--s-7);
+  padding-top: var(--s-6);
+  border-top: 1px solid var(--rule);
+}
+
+.authors__role {
+  margin: var(--s-2) 0 var(--s-4);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--gold-700);
+}
+
+@media (min-width: 720px) {
+  .authors__photos {
+    padding-right: var(--s-8);
+    padding-bottom: var(--s-8);
+  }
+  .authors__photos::before {
+    left: calc(var(--s-5) * -1);
+  }
+}
+
+@media (min-width: 1040px) {
+  .authors__photos {
+    grid-column: 1 / 7;
+  }
+  .authors__text {
+    grid-column: 8 / 13;
+    align-self: center;
+  }
+}
+
+
+/* ==========================================================================
+   9. EDITOR
+   ========================================================================== */
+.editor h2 em {
+  color: var(--teal-200);
+}
+
+.editor__org {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--gold-500);
+}
+
+.editor__quote {
+  margin: var(--s-6) 0;
+  padding-left: var(--s-5);
+  border-left: 3px solid var(--gold-500);
+  font-style: italic;
+  font-size: var(--fs-h3);
+  line-height: 1.45;
+  color: var(--paper);
+  background: none;
+}
+
+.editor__bio {
+  color: var(--teal-200);
+}
+
+.editor__photo {
+  position: relative;
+  isolation: isolate;
+  margin: var(--s-7) 0 0;
+  max-width: 280px;
+}
+
+.editor__photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.editor__photo::after {
+  content: "";
+  position: absolute;
+  inset: var(--s-4) calc(var(--s-4) * -1) calc(var(--s-4) * -1) var(--s-4);
+  border: 1px solid var(--gold-500);
+  z-index: -1;
+}
+
+@media (min-width: 720px) {
+  .editor__photo {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1040px) {
+  .editor__text {
+    grid-column: 1 / 8;
+  }
+  .editor__photo {
+    grid-column: 9 / 13;
+    align-self: center;
+    margin-top: 0;
+  }
+}
+
+
+/* ==========================================================================
+   10. SEMINARS
+   ========================================================================== */
+.seminars__body {
+  margin-top: var(--s-7);
+}
+
+.seminars__photo {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: var(--s-6);
+}
+
+.seminars__types {
+  list-style: none;
+  margin-top: var(--s-6);
+  border-top: 1px solid var(--rule-strong);
+}
+
+.seminars__types li {
+  position: relative;
+  padding: var(--s-4) 0 var(--s-4) var(--s-6);
+  border-bottom: 1px solid var(--rule);
+}
+
+.seminars__types li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.55em;
+  width: 16px;
+  height: 2px;
+  background: var(--gold-500);
+}
+
+.seminars__type-name {
+  font-weight: 500;
+  font-size: 1.1875rem;
+  line-height: 1.3;
+  color: var(--teal-900);
+}
+
+.seminars__types p {
+  font-family: var(--font-sans);
+  font-size: var(--fs-ui);
+  color: var(--ink-soft);
+}
+
+.seminars__info .contact-line {
+  margin-top: var(--s-6);
+}
+
+@media (min-width: 1040px) {
+  .seminars__head > div {
+    grid-column: 1 / 8;
+  }
+  .seminars__info {
+    grid-column: 1 / 7;
+  }
+  .seminars__form {
+    grid-column: 8 / 13;
+    position: sticky;
+    top: calc(var(--nav-h) + var(--s-5));
+    align-self: start;
+  }
+}
+
+
+/* ==========================================================================
+   11. WAITLIST (ORDER)
+   ========================================================================== */
+.order__launch {
+  margin-top: var(--s-6);
+  background: var(--gold-100);
+  padding: var(--s-5);
+  border-left: 3px solid var(--gold-500);
+}
+
+/* small sunrise on a horizon line: svg sits directly on the ::after rule */
+.order__rays,
+.order__info::after {
+  display: none;
+}
+
+.order__form {
+  margin-top: var(--s-7);
+}
+
+@media (min-width: 720px) {
+  .order__rays {
+    display: block;
+    width: 220px;
+    margin-top: var(--s-7);
+  }
+  .order__info::after {
+    content: "";
+    display: block;
+    border-top: 1px solid var(--rule-strong);
+  }
+}
+
+@media (min-width: 1040px) {
+  .order__info {
+    grid-column: 1 / 7;
+  }
+  .order__form {
+    grid-column: 8 / 13;
+    margin-top: 0;
+  }
+}
