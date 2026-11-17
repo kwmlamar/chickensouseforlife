@@ -134,65 +134,30 @@
   position: relative;
   z-index: 1;
   width: min(240px, 64%);
-  aspect-ratio: 2 / 3;
-  background: var(--paper);
-  color: var(--teal-900);
-  padding: var(--s-6) var(--s-5);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  margin: 0;
   transform: rotate(-2.5deg);
+}
+
+.book-cover__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
   box-shadow: var(--shadow-hard);
   border-radius: 0 var(--r) var(--r) 0;
-  border-left: 6px solid var(--teal-900);
 }
 
 .book-cover__label {
+  position: absolute;
+  top: calc(-1 * var(--s-6));
+  left: 0;
   font-family: var(--font-sans);
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: .2em;
-  color: var(--gold-700);
-}
-
-.book-cover__title {
-  margin-top: var(--s-5);
-  font-weight: 500;
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
-  text-transform: uppercase;
-  line-height: 1.05;
-  color: var(--teal-900);
-}
-
-.book-cover__title span {
-  display: block;
-  font-style: italic;
-  text-transform: none;
-  color: var(--teal-700);
-}
-
-.book-cover__edition {
-  margin-top: var(--s-3);
-  font-style: italic;
-  font-size: var(--fs-small);
-}
-
-.book-cover__rays {
-  width: 62%;
-  margin-top: auto;
-  border-bottom: 1px solid var(--teal-900);
-}
-
-.book-cover__author {
-  margin-top: var(--s-4);
-  font-family: var(--font-sans);
-  font-weight: 500;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  line-height: 1.5;
+  color: var(--gold-500);
 }
 
 @media (min-width: 720px) {
