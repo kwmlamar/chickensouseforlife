@@ -781,9 +781,9 @@
 .authors__photo-main {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 30%;
 }
 
 .authors__photo-inset {
