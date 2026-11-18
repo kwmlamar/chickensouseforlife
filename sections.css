@@ -763,19 +763,6 @@
 .authors__photos {
   position: relative;
   max-width: 620px;
-  padding-right: var(--s-6);
-  padding-bottom: var(--s-7);
-}
-
-.authors__photos::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: var(--s-7);
-  width: 60%;
-  bottom: 0;
-  background: var(--teal-100);
-  z-index: -1;
 }
 
 .authors__photo-main {
@@ -784,18 +771,6 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: center 30%;
-}
-
-.authors__photo-inset {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 38%;
-  max-width: 260px;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center top;
-  border: 8px solid var(--paper);
 }
 
 .authors__bio + .authors__bio {
@@ -812,16 +787,6 @@
   text-transform: uppercase;
   letter-spacing: .12em;
   color: var(--gold-700);
-}
-
-@media (min-width: 720px) {
-  .authors__photos {
-    padding-right: var(--s-8);
-    padding-bottom: var(--s-8);
-  }
-  .authors__photos::before {
-    left: calc(var(--s-5) * -1);
-  }
 }
 
 @media (min-width: 1040px) {
