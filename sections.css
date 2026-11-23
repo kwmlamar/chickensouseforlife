@@ -985,3 +985,10 @@
     margin-top: 0;
   }
 }
+
+.order__price {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  color: var(--teal-900);
+  margin-bottom: var(--s-2);
+}
